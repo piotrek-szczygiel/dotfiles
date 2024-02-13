@@ -25,4 +25,6 @@ alias gp "git push"
 alias grh "git reset HEAD"
 alias gs "git status"
 
+alias python "python3"
+
 set fish_greeting
