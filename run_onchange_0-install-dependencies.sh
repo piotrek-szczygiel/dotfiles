@@ -31,6 +31,7 @@ brew install --quiet --casks    \
     linearmouse                 \
     keepingyouawake             \
     monitorcontrol              \
+    rancher                     \
     raycast                     \
     slack                       \
     stats                       \
