@@ -27,6 +27,7 @@ brew install --quiet --formulae \
 brew install --quiet --casks    \
     1password                   \
     arc                         \
+    hammerspoon                 \
     intellij-idea               \
     linearmouse                 \
     keepingyouawake             \
