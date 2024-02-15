@@ -32,6 +32,7 @@ brew install --quiet --casks    \
     intellij-idea               \
     linearmouse                 \
     keepingyouawake             \
+    microsoft-outlook           \
     monitorcontrol              \
     proxy-audio-device          \
     rancher                     \
