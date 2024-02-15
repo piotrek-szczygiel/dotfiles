@@ -31,6 +31,7 @@ brew install --quiet --casks    \
     1password                   \
     arc                         \
     corretto17                  \
+    discord                     \
     hammerspoon                 \
     intellij-idea               \
     linearmouse                 \
@@ -43,5 +44,6 @@ brew install --quiet --casks    \
     raycast                     \
     slack                       \
     stats                       \
+    telegram                    \
     visual-studio-code          \
     wezterm
