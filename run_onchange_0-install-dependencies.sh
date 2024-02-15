@@ -34,6 +34,7 @@ brew install --quiet --casks    \
     hammerspoon                 \
     intellij-idea               \
     linearmouse                 \
+    karabiner-elements          \
     keepingyouawake             \
     microsoft-outlook           \
     monitorcontrol              \
