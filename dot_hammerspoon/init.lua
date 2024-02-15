@@ -20,14 +20,17 @@ hs.hotkey.bind({"alt"}, "3", toggle_app("company.thebrowser.Browser"))
 hs.eventtap.new({hs.eventtap.event.types.systemDefined}, function(event)
     local systemKey = event:systemKey()
 
-    if not systemKey.down and systemKey.key == "MUTE" then
-        local speakers = hs.audiodevice.findOutputByUID("ProxyAudioDevice_UID")
-        local headphones = hs.audiodevice.findOutputByName("HyperX Cloud Alpha Wireless")
+    if systemKey.key == "MUTE" then
 
-        if speakers:inUse() then
-            headphones:setDefaultOutputDevice()
-        else
-            speakers:setDefaultOutputDevice()
+        if not systemKey.down then
+            local speakers = hs.audiodevice.findOutputByUID("ProxyAudioDevice_UID")
+            local headphones = hs.audiodevice.findOutputByName("HyperX Cloud Alpha Wireless")
+
+            if speakers:inUse() then
+                headphones:setDefaultOutputDevice()
+            else
+                speakers:setDefaultOutputDevice()
+            end
         end
 
         return true
