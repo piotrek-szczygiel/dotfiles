@@ -2,8 +2,7 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 
 set -gx BUN_INSTALL "$HOME/.bun"
-
-set -gx PATH "$BUN_INSTALL/bin" "$HOME/slfulfi/scripts" $PATH
+set -gx PATH /opt/homebrew/bin "$BUN_INSTALL/bin" "$HOME/slfulfi/scripts" $PATH
 
 alias q "exit"
 

@@ -10,6 +10,7 @@ brew update
 
 brew install --quiet --formulae \
     bun                         \
+    chezmoi                     \
     eza                         \
     fd                          \
     fish                        \
