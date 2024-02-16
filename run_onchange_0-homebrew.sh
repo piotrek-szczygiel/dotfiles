@@ -50,3 +50,4 @@ brew install --quiet --casks    \
     wezterm
 
 brew services start colima
+sudo ln -sf "$HOME/.colima/default/docker.sock" /var/run/docker.sock
