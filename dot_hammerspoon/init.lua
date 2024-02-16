@@ -62,9 +62,10 @@ hs.hotkey.bind({"cmd"}, "f12", function()
     if fiddler:running() then
         fiddler:stop()
         hs.alert.show("Stopped")
+        hs.notify.show("Fiddler", "", "Stopped")
     else
         fiddler:start()
-        hs.alert.show("Started")
+        hs.notify.show("Fiddler", "", "Started")
     end
 end)
 
