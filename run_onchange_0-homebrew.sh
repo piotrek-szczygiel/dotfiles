@@ -12,7 +12,9 @@ brew update
 brew install --quiet --formulae \
     bun                         \
     chezmoi                     \
+    colima                      \
     coreutils                   \
+    docker                      \
     eza                         \
     fd                          \
     fish                        \
@@ -40,10 +42,11 @@ brew install --quiet --casks    \
     microsoft-outlook           \
     monitorcontrol              \
     proxy-audio-device          \
-    rancher                     \
     raycast                     \
     slack                       \
     stats                       \
     telegram                    \
     visual-studio-code          \
     wezterm
+
+brew services start colima

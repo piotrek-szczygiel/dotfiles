@@ -28,8 +28,11 @@ function toggleApp(bundleID)
 end
 
 hs.hotkey.bind({"alt"}, "1", toggleApp("com.github.wez.wezterm"))
-hs.hotkey.bind({"alt"}, "2", toggleApp("com.jetbrains.intellij"))
-hs.hotkey.bind({"alt"}, "3", toggleApp("company.thebrowser.Browser"))
+hs.hotkey.bind({"alt"}, "2", toggleApp("com.microsoft.VSCode"))
+hs.hotkey.bind({"alt"}, "3", toggleApp("com.jetbrains.intellij"))
+hs.hotkey.bind({"alt"}, "4", toggleApp("company.thebrowser.Browser"))
+
+hs.hotkey.bind({"alt"}, "0", function() hs.alert.show(hs.application.frontmostApplication():bundleID()) end)
 
 hs.eventtap.new({hs.eventtap.event.types.systemDefined}, function(event)
     local systemKey = event:systemKey()
