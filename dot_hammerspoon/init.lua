@@ -39,8 +39,6 @@ hs.hotkey.bind({"alt"}, "0", function()
     hs.alert.show(hs.application.frontmostApplication():bundleID())
 end)
 
-hs.caffeinate.set("system", true, false)
-
 fiddlerState = 0
 fiddler = hs.timer.new(1, function()
     local p = hs.mouse.absolutePosition()
