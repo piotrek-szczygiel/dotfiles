@@ -40,11 +40,9 @@ brew install --quiet --casks    \
     linearmouse                 \
     karabiner-elements          \
     keepingyouawake             \
-    microsoft-outlook           \
     monitorcontrol              \
     proxy-audio-device          \
     raycast                     \
-    slack                       \
     stats                       \
     telegram                    \
     visual-studio-code          \
