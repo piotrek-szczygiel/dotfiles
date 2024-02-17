@@ -4,7 +4,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
 Plug 'vimlab/split-term.vim'
@@ -12,17 +11,7 @@ Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
-if (has('autocmd') && !has('gui_running'))
-  augroup colorset
-    autocmd!
-    let s:white = { 'gui': '#ABB2BF', 'cterm': '145', 'cterm16' : '7' }
-    autocmd ColorScheme * call onedark#set_highlight('Normal', { 'fg': s:white })
-  augroup END
-endif
-
 let g:indentLine_fileTypeExclude = ['json', 'markdown']
-
-colorscheme onedark
 
 set colorcolumn=120
 set expandtab
