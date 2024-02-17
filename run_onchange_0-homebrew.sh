@@ -35,6 +35,7 @@ brew install --quiet --casks    \
     corretto17                  \
     discord                     \
     hammerspoon                 \
+    httpie                      \
     intellij-idea               \
     linearmouse                 \
     karabiner-elements          \
