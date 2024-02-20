@@ -43,6 +43,7 @@ brew install --quiet --casks    \
     monitorcontrol              \
     proxy-audio-device          \
     raycast                     \
+    rectangle-pro               \
     stats                       \
     telegram                    \
     visual-studio-code          \
