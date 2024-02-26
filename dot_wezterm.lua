@@ -3,7 +3,7 @@ local act = wezterm.action
 
 local config = wezterm.config_builder()
 
-config.color_scheme = 'AlienBlood'
+config.color_scheme = 'Ef-Light'
 config.font_size = 15
 
 config.initial_cols = 120
