@@ -26,4 +26,8 @@ alias gs "git status"
 
 alias python "python3"
 
+function sr
+    rg --json -C 2 -i $argv | delta
+end
+
 set fish_greeting

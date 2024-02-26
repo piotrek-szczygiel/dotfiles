@@ -22,16 +22,17 @@
     pushInsteadOf = "github:"
     pushInsteadOf = "git://github.com/"
 
+[diff]
+    colorMoved = default
+
 [interactive]
     diffFilter = delta --color-only
 
 [delta]
-    features = line-numbers decorations
-
-[delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
+    light = true
+    navigate = true
+    line-numbers = true
+    map-styles = "bold purple => syntax #ffd1ed, bold cyan => syntax #d1edff"
 
 [user]
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDR5PjSdM3RBmg6MlNazABdkKnm0c5DK6T6tebaASZsd
