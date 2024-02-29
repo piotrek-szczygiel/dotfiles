@@ -10,6 +10,7 @@ brew tap oven-sh/bun
 brew update
 
 brew install --quiet --formulae \
+    awscli                      \
     bun                         \
     chezmoi                     \
     colima                      \
@@ -18,6 +19,7 @@ brew install --quiet --formulae \
     eza                         \
     fd                          \
     fish                        \
+    fzf                         \
     gh                          \
     git                         \
     git-delta                   \
