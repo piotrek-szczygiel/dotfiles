@@ -4,6 +4,8 @@ set -gx VISUAL nvim
 set -gx BUN_INSTALL "$HOME/.bun"
 set -gx PATH /opt/homebrew/bin "$BUN_INSTALL/bin" "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" $PATH
 
+set -gx TESTCONTAINERS_HOST_OVERRIDE (colima ls -j | jq -r ".address")
+
 alias q "exit"
 
 alias l "eza  --git --icons --group-directories-first"
