@@ -1,9 +1,23 @@
 local wezterm = require 'wezterm'
+local config = wezterm.config_builder()
 local act = wezterm.action
 
-local config = wezterm.config_builder()
+function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+  return 'Dark'
+end
 
-config.color_scheme = 'Ef-Light'
+function color_scheme_for_appearance(appearance)
+  if appearance:find 'Dark' then
+    return 'Ef-Autumn'
+  else
+    return 'Ef-Light'
+  end
+end
+
+config.color_scheme = color_scheme_for_appearance(get_appearance())
 config.font_size = 15
 
 config.initial_cols = 120

@@ -8,7 +8,7 @@
 [core]
     editor = nvim
     autocrlf = input
-    pager = delta
+    pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)"
 
 [push]
     default = simple
@@ -22,17 +22,18 @@
     pushInsteadOf = "github:"
     pushInsteadOf = "git://github.com/"
 
-[diff]
-    colorMoved = default
-
 [interactive]
     diffFilter = delta --color-only
 
 [delta]
-    light = true
     navigate = true
     line-numbers = true
-    map-styles = "bold purple => syntax #ffd1ed, bold cyan => syntax #d1edff"
+
+[delta "light-mode"]
+    light = true
+
+[delta "dark-mode"]
+    light = false
 
 [user]
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDR5PjSdM3RBmg6MlNazABdkKnm0c5DK6T6tebaASZsd
