@@ -39,7 +39,6 @@ brew install --quiet --casks    \
     hammerspoon                 \
     httpie                      \
     intellij-idea               \
-    linearmouse                 \
     karabiner-elements          \
     keepingyouawake             \
     monitorcontrol              \
