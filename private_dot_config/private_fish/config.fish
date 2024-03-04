@@ -34,4 +34,10 @@ function sr
     rg --json -C 2 -i $argv | delta
 end
 
+function awslocal --description "awslocal <port> <commands>"
+    set -x AWS_ACCESS_KEY_ID test
+    set -x AWS_SECRET_ACCESS_KEY test
+    aws --endpoint-url "http://192.168.107.2:"$argv[-1] --region "us-east-1" $argv[1..-2]
+end
+
 set fish_greeting
