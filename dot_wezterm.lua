@@ -18,7 +18,7 @@ local function color_scheme_for_appearance(appearance)
 end
 
 config.color_scheme = color_scheme_for_appearance(get_appearance())
-config.font_size = 15
+config.font_size = 16
 
 config.initial_cols = 120
 config.initial_rows = 30
