@@ -25,6 +25,8 @@ config.initial_rows = 30
 
 config.window_decorations = "RESIZE"
 
+config.scrollback_lines = 10000
+
 config.keys = {
   { key = "k", mods = "CMD", action = act.ClearScrollback "ScrollbackAndViewport" },
 }
