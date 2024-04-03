@@ -35,3 +35,4 @@ function sr
 end
 
 set fish_greeting
+zoxide init fish | source
