@@ -29,7 +29,8 @@ brew install --quiet --formulae \
     python                      \
     ripgrep                     \
     shellcheck                  \
-    tokei
+    tokei                       \
+    zoxide
 
 brew install --quiet --casks    \
     1password                   \
