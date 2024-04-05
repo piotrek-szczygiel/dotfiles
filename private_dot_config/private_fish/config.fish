@@ -1,8 +1,8 @@
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
-set -gx BUN_INSTALL "$HOME/.bun"
-set -gx PATH /opt/homebrew/bin "$BUN_INSTALL/bin" "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" $PATH
+set -gx PNPM_HOME "$HOME/Library/pnpm"
+set -gx PATH "$PNPM_HOME" "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "/opt/homebrew/bin" $PATH
 
 set -gx TESTCONTAINERS_HOST_OVERRIDE (colima ls -j | jq -r ".address")
 
@@ -26,12 +26,17 @@ alias gp "git push"
 alias grh "git reset HEAD"
 alias gs "git status"
 
+alias aws-env "bass source aws-helper"
 alias python "python3"
 
-alias aws-env "bass source aws-helper" 
+alias pn "pnpm"
 
 function sr
     rg --json -C 2 -i $argv | delta
+end
+
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
 end
 
 set fish_greeting
