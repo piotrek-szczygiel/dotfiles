@@ -30,7 +30,7 @@ local function toggleApp(bundleID)
   end
 end
 
-hs.hotkey.bind({}, "f1", toggleApp "com.github.wez.wezterm")
+hs.hotkey.bind({}, "f1", toggleApp "dev.warp.Warp-Stable")
 hs.hotkey.bind({}, "f2", toggleApp "company.thebrowser.Browser")
 hs.hotkey.bind({}, "f3", toggleApp "com.jetbrains.intellij")
 hs.hotkey.bind({}, "f4", toggleApp "com.microsoft.VSCode")
