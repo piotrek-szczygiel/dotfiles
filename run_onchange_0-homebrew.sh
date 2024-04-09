@@ -49,6 +49,7 @@ brew install --quiet --casks    \
     stats                       \
     telegram                    \
     visual-studio-code          \
+    warp                        \
     wezterm                     \
     zed
 
