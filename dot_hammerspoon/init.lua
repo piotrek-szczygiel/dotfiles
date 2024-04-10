@@ -30,10 +30,9 @@ local function toggleApp(bundleID)
   end
 end
 
-hs.hotkey.bind({}, "f1", toggleApp "dev.warp.Warp-Stable")
-hs.hotkey.bind({}, "f2", toggleApp "company.thebrowser.Browser")
-hs.hotkey.bind({}, "f3", toggleApp "com.jetbrains.intellij")
-hs.hotkey.bind({}, "f4", toggleApp "com.microsoft.VSCode")
+hs.hotkey.bind({ "alt" }, "b", toggleApp "company.thebrowser.Browser")
+hs.hotkey.bind({ "alt" }, "i", toggleApp "com.jetbrains.intellij")
+hs.hotkey.bind({ "alt" }, "v", toggleApp "com.microsoft.VSCode")
 
 hs.hotkey.bind({ "alt" }, "0", function()
   hs.alert.show(hs.application.frontmostApplication():bundleID())
