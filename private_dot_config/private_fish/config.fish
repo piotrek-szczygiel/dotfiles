@@ -40,4 +40,6 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 
 set fish_greeting
+
+fnm env --use-on-cd | source
 zoxide init fish | source

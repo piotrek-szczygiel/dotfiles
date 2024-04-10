@@ -19,6 +19,7 @@ brew install --quiet --formulae \
     eza                         \
     fd                          \
     fish                        \
+    fnm                         \
     fzf                         \
     gh                          \
     git                         \
