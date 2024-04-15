@@ -14,6 +14,4 @@ if ! grep -q "$touchid" /etc/pam.d/sudo_local; then
     echo "$touchid" | sudo tee -a /etc/pam.d/sudo_local
 fi
 
-fish -c "tide configure --auto --style=Classic --prompt_colors='16 colors' --show_time=No --classic_prompt_separators=Vertical --powerline_prompt_heads=Round --powerline_prompt_tails=Flat --powerline_prompt_style='One line' --prompt_spacing=Sparse --icons='Many icons' --transient=No" > /dev/null
-
 git clone https://github.com/piotrek-szczygiel/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
