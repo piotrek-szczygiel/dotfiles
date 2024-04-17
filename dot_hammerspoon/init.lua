@@ -33,7 +33,6 @@ end
 hs.hotkey.bind({ "alt" }, "b", toggleApp "company.thebrowser.Browser")
 hs.hotkey.bind({ "alt" }, "i", toggleApp "com.jetbrains.intellij")
 hs.hotkey.bind({ "alt" }, "v", toggleApp "com.microsoft.VSCode")
-hs.hotkey.bind({ "alt" }, "z", toggleApp "dev.zed.Zed")
 
 hs.hotkey.bind({ "alt" }, "0", function()
   hs.alert.show(hs.application.frontmostApplication():bundleID())
