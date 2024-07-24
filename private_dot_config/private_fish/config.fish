@@ -14,6 +14,7 @@ alias ll "eza --git --icons --group-directories-first -lF"
 alias la "eza --git --icons --group-directories-first -laF"
 
 alias ga "git add"
+alias gb "git branch | grep -v '^\*' | fzf --height=20% --reverse --info=inline | xargs git switch"
 alias gc "git commit"
 alias gca "git commit -a"
 alias gclean "git clean -ffxd :/"
