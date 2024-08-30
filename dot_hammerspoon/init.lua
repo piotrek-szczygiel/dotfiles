@@ -38,6 +38,37 @@ hs.hotkey.bind({ "alt" }, "0", function()
   hs.alert.show(hs.application.frontmostApplication():bundleID())
 end)
 
+function cycleWindowsOnCurrentScreen()
+  local currentApp = hs.application.frontmostApplication()
+  local currentScreen = hs.screen.mainScreen()
+
+  local windows = {}
+
+  for _, window in ipairs(currentApp:allWindows()) do
+    if window:screen() == currentScreen then
+      table.insert(windows, window)
+    end
+  end
+
+  if #windows > 1 then
+    local currentWindow = hs.window.focusedWindow()
+    local nextWindow = nil
+
+    for i, window in ipairs(windows) do
+      if window:id() == currentWindow:id() then
+        nextWindow = windows[(i % #windows) + 1]
+        break
+      end
+    end
+
+    if nextWindow then
+      nextWindow:focus()
+    end
+  end
+end
+
+hs.hotkey.bind({ "cmd" }, "`", cycleWindowsOnCurrentScreen)
+
 EventTap = hs.eventtap.new({ hs.eventtap.event.types.systemDefined }, function(event)
   local systemKey = event:systemKey()
 
