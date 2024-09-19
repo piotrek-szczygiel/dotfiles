@@ -19,7 +19,6 @@ brew install --quiet --formulae \
     eza                         \
     fd                          \
     fish                        \
-    fnm                         \
     fzf                         \
     gh                          \
     git                         \
@@ -50,9 +49,7 @@ brew install --quiet --casks    \
     stats                       \
     telegram                    \
     visual-studio-code          \
-    warp                        \
-    wezterm                     \
-    zed
+    warp
 
 brew services start colima
 sudo ln -sf "$HOME/.colima/default/docker.sock" /var/run/docker.sock
