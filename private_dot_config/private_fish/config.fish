@@ -36,10 +36,6 @@ function sr
     rg --json -C 2 -i $argv | delta
 end
 
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-
 set fish_greeting
 
 fnm env --use-on-cd | source
