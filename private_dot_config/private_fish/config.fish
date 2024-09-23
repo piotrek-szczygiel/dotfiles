@@ -4,8 +4,6 @@ set -gx VISUAL nvim
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 set -gx PATH "$PNPM_HOME" "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "/opt/homebrew/bin" $PATH
 
-set -gx TESTCONTAINERS_HOST_OVERRIDE (colima ls -j | jq -r ".address")
-
 alias q "exit"
 
 alias l "eza  --git --icons --group-directories-first"
@@ -38,5 +36,4 @@ end
 
 set fish_greeting
 
-fnm env --use-on-cd | source
 zoxide init fish | source
