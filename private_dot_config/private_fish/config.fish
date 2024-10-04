@@ -1,8 +1,7 @@
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
-set -gx PNPM_HOME "$HOME/Library/pnpm"
-set -gx PATH "$PNPM_HOME" "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "/opt/homebrew/bin" $PATH
+set -gx PATH "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "/opt/homebrew/bin" $PATH
 
 alias q "exit"
 
@@ -28,7 +27,7 @@ alias gs "git status"
 alias aws-env "bass source aws-helper"
 alias python "python3"
 
-alias pn "pnpm"
+alias ftl "bun run format && bun run tsc && bun run lint"
 
 function sr
     rg --json -C 2 -i $argv | delta
@@ -37,3 +36,4 @@ end
 set fish_greeting
 
 zoxide init fish | source
+fnm env --use-on-cd --shell fish | source
