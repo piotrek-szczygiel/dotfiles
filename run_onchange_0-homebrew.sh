@@ -46,7 +46,6 @@ brew install --quiet --casks    \
     proxy-audio-device          \
     raycast                     \
     rectangle-pro               \
-    stats                       \
     telegram                    \
     temurin                     \
     visual-studio-code
