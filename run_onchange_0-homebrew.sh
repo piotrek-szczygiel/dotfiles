@@ -5,7 +5,6 @@ if ! command -v brew &> /dev/null; then
     curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 fi
 
-brew tap homebrew/cask-versions
 brew tap oven-sh/bun
 brew update
 
@@ -51,3 +50,5 @@ brew install --quiet --casks    \
     telegram                    \
     temurin                     \
     visual-studio-code
+
+brew upgrade
