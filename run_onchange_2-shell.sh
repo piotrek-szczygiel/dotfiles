@@ -17,8 +17,3 @@ touchid="auth sufficient pam_tid.so"
 if ! grep -q "$touchid" /etc/pam.d/sudo_local; then
     echo "$touchid" | sudo tee -a /etc/pam.d/sudo_local
 fi
-
-kickstart="${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-if [ ! -d "$kickstart" ]; then
-    git clone https://github.com/piotrek-szczygiel/kickstart.nvim.git "$kickstart"
-fi

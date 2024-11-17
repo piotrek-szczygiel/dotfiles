@@ -13,7 +13,6 @@ brew install --quiet --formulae \
     awscli                      \
     bun                         \
     chezmoi                     \
-    colima                      \
     coreutils                   \
     docker                      \
     eza                         \
@@ -35,21 +34,19 @@ brew install --quiet --formulae \
 brew install --quiet --casks    \
     1password                   \
     arc                         \
-    corretto17                  \
+    betterdisplay               \
     discord                     \
+    firefox                     \
+    google-chrome               \
     hammerspoon                 \
     httpie                      \
     intellij-idea               \
     karabiner-elements          \
     keepingyouawake             \
-    monitorcontrol              \
     proxy-audio-device          \
     raycast                     \
     rectangle-pro               \
     stats                       \
     telegram                    \
-    visual-studio-code          \
-    warp
-
-brew services start colima
-sudo ln -sf "$HOME/.colima/default/docker.sock" /var/run/docker.sock
+    temurin                     \
+    visual-studio-code
