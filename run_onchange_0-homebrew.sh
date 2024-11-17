@@ -41,6 +41,7 @@ brew install --quiet --casks    \
     hammerspoon                 \
     httpie                      \
     intellij-idea               \
+    jordanbaird-ice             \
     karabiner-elements          \
     keepingyouawake             \
     proxy-audio-device          \
