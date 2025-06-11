@@ -31,7 +31,7 @@ local function toggleApp(bundleID)
 end
 
 hs.hotkey.bind({ "alt" }, "space", toggleApp "com.mitchellh.ghostty")
-hs.hotkey.bind({ "alt" }, "b", toggleApp "company.thebrowser.Browser")
+hs.hotkey.bind({ "alt" }, "b", toggleApp "com.google.Chrome")
 hs.hotkey.bind({ "alt" }, "i", toggleApp "com.jetbrains.intellij")
 hs.hotkey.bind({ "alt" }, "v", toggleApp "com.microsoft.VSCode")
 
