@@ -68,7 +68,7 @@ function cycleWindowsOnCurrentScreen()
   end
 end
 
-hs.hotkey.bind({ "cmd" }, "`", cycleWindowsOnCurrentScreen)
+-- hs.hotkey.bind({ "cmd" }, "`", cycleWindowsOnCurrentScreen)
 
 EventTap = hs.eventtap.new({ hs.eventtap.event.types.systemDefined }, function(event)
   local systemKey = event:systemKey()

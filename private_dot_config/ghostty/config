@@ -3,6 +3,8 @@ window-height = 40
 
 font-size = 16
 
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
