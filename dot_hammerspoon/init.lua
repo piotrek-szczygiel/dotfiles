@@ -68,26 +68,18 @@ function cycleWindowsOnCurrentScreen()
   end
 end
 
--- hs.hotkey.bind({ "cmd" }, "`", cycleWindowsOnCurrentScreen)
 
-EventTap = hs.eventtap.new({ hs.eventtap.event.types.systemDefined }, function(event)
-  local systemKey = event:systemKey()
+function toggleAudioDevice()
+  local speakers = hs.audiodevice.findOutputByName "MPG271QX OLED"
+  local headphones = hs.audiodevice.findOutputByName "HyperX Cloud Alpha Wireless"
 
-  if systemKey.key == "MUTE" then
-    if not systemKey.down then
-      local speakers = hs.audiodevice.findOutputByUID "ProxyAudioDevice_UID"
-      local headphones = hs.audiodevice.findOutputByName "HyperX Cloud Alpha Wireless"
-
-      local newDevice = speakers
-      if speakers:uid() == hs.audiodevice.defaultOutputDevice():uid() then
-        newDevice = headphones
-      end
-
-      newDevice:setDefaultOutputDevice()
-      hs.notify.show("Sound output", "", newDevice:name())
-    end
-
-    return true
+  local newDevice = speakers
+  if speakers:uid() == hs.audiodevice.defaultOutputDevice():uid() then
+    newDevice = headphones
   end
-end)
-EventTap:start()
+
+  newDevice:setDefaultOutputDevice()
+  hs.notify.show("Sound output", "", newDevice:name())
+end
+
+hs.hotkey.bind({ "cmd" }, "f12", toggleAudioDevice)
