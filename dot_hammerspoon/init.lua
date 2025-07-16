@@ -15,59 +15,6 @@ end
 Watcher = hs.pathwatcher.new(os.getenv "HOME" .. "/.hammerspoon/", reloadConfig)
 Watcher:start()
 
-local function toggleApp(bundleID)
-  return function()
-    local app = hs.application.get(bundleID)
-    if app ~= nil then
-      if app:isFrontmost() then
-        app:hide()
-      else
-        app:activate()
-      end
-    else
-      hs.application.launchOrFocusByBundleID(bundleID)
-    end
-  end
-end
-
-hs.hotkey.bind({ "alt" }, "space", toggleApp "com.mitchellh.ghostty")
-hs.hotkey.bind({ "alt" }, "b", toggleApp "com.google.Chrome")
-hs.hotkey.bind({ "alt" }, "i", toggleApp "com.jetbrains.intellij")
-hs.hotkey.bind({ "alt" }, "v", toggleApp "com.microsoft.VSCode")
-
-hs.hotkey.bind({ "alt" }, "0", function()
-  hs.alert.show(hs.application.frontmostApplication():bundleID())
-end)
-
-function cycleWindowsOnCurrentScreen()
-  local currentApp = hs.application.frontmostApplication()
-  local currentScreen = hs.screen.mainScreen()
-
-  local windows = {}
-
-  for _, window in ipairs(currentApp:allWindows()) do
-    if window:screen() == currentScreen then
-      table.insert(windows, window)
-    end
-  end
-
-  if #windows > 1 then
-    local currentWindow = hs.window.focusedWindow()
-    local nextWindow = nil
-
-    for i, window in ipairs(windows) do
-      if window:id() == currentWindow:id() then
-        nextWindow = windows[(i % #windows) + 1]
-        break
-      end
-    end
-
-    if nextWindow then
-      nextWindow:focus()
-    end
-  end
-end
-
 
 function toggleAudioDevice()
   local speakers = hs.audiodevice.findOutputByName "MPG271QX OLED"
