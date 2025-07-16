@@ -30,3 +30,8 @@ function toggleAudioDevice()
 end
 
 hs.hotkey.bind({ "cmd" }, "f12", toggleAudioDevice)
+
+
+hs.hotkey.bind({ "alt" }, "0", function()
+  hs.alert.show(hs.application.frontmostApplication():bundleID())
+end)
