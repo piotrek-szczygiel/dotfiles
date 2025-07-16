@@ -8,4 +8,3 @@ theme = dark:catppuccin-mocha,light:catppuccin-latte
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
-keybind = global:alt+grave_accent=toggle_quick_terminal
