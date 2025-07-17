@@ -1,7 +1,7 @@
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
-set -gx PATH "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "/opt/homebrew/bin" $PATH
+set -gx PATH "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "$HOME/.bun/bin" "/opt/homebrew/bin" $PATH
 
 alias q "exit"
 
@@ -32,4 +32,7 @@ end
 set fish_greeting
 
 zoxide init fish | source
-fastfetch
+
+if test "$TERM" = "xterm-ghostty"
+    fastfetch
+end
