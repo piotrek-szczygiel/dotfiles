@@ -24,6 +24,7 @@ alias aws-env "bass source aws-helper"
 alias python "python3"
 
 alias c "code"
+alias ch "chezmoi edit --apply"
 
 function sr
     rg --json -C 2 -i $argv | delta
