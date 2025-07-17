@@ -33,7 +33,3 @@ end
 set fish_greeting
 
 zoxide init fish | source
-
-if test "$TERM" = "xterm-ghostty"
-    fastfetch
-end
