@@ -1,7 +1,7 @@
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
-set -gx PATH "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "$HOME/.bun/bin" "/opt/homebrew/bin" $PATH
+set -gx PATH "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "$HOME/.bun/bin" "/opt/homebrew/bin" "$HOME/.bin" "$HOME/.local/share/bob/nvim-bin" $PATH
 
 alias q "exit"
 
