@@ -1,9 +1,9 @@
-set -gx EDITOR nvim
-set -gx VISUAL nvim
+set -gx EDITOR hx
+set -gx VISUAL hx
 
-set -gx PATH "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "$HOME/.bun/bin" "/opt/homebrew/bin" "$HOME/.bin" "$HOME/.local/share/bob/nvim-bin" $PATH
+set -gx PATH "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "$HOME/.bun/bin" /opt/homebrew/bin "$HOME/.bin" $PATH
 
-alias q "exit"
+alias q exit
 
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
@@ -21,9 +21,9 @@ alias gp "git push"
 alias gs "git status"
 
 alias aws-env "bass source aws-helper"
-alias python "python3"
+alias python python3
 
-alias c "code"
+alias c code
 alias ch "chezmoi edit --apply"
 
 function sr
