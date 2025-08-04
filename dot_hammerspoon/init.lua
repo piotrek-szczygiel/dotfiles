@@ -18,7 +18,7 @@ Watcher:start()
 
 function toggleAudioDevice()
   local speakers = hs.audiodevice.findOutputByName "MPG271QX OLED"
-  local headphones = hs.audiodevice.findOutputByName "HyperX Cloud Alpha Wireless"
+  local headphones = hs.audiodevice.findOutputByName "A50 Game"
 
   local newDevice = speakers
   if speakers:uid() == hs.audiodevice.defaultOutputDevice():uid() then
