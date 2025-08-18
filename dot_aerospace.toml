@@ -168,6 +168,10 @@ automatically-unhide-macos-hidden-apps = true
     run = ['layout floating']
 
 [[on-window-detected]]
+    if.app-id = 'com.apple.reminders'
+    run = ['layout floating']
+
+[[on-window-detected]]
     if.app-id = 'com.mitchellh.ghostty'
     run = 'move-node-to-workspace T'
 
