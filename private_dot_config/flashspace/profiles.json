@@ -53,7 +53,11 @@
         },
         {
           "apps" : [
-
+            {
+              "bundleIdentifier" : "io.httpie.desktop",
+              "iconPath" : "/Applications/HTTPie.app/Contents/Resources/icon.icns",
+              "name" : "HTTPie"
+            }
           ],
           "display" : "MPG271QX OLED",
           "id" : "36307EA1-065C-46D7-B370-275CC05526A0",
@@ -79,20 +83,6 @@
           "name" : "Slack",
           "shortcut" : "opt+4",
           "symbolIconName" : "message.badge"
-        },
-        {
-          "apps" : [
-            {
-              "bundleIdentifier" : "com.microsoft.teams2",
-              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
-              "name" : "Microsoft Teams"
-            }
-          ],
-          "display" : "MPG271QX OLED",
-          "id" : "53DEFDBE-7C6B-4492-B9D7-1D6177C23DAC",
-          "name" : "Teams",
-          "shortcut" : "opt+5",
-          "symbolIconName" : "headphones"
         }
       ]
     }

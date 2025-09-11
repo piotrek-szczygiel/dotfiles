@@ -29,6 +29,11 @@
       "bundleIdentifier" : "com.logi.ghub",
       "iconPath" : "/Applications/lghub.app/Contents/Resources/icon.icns",
       "name" : "Logitech G HUB"
+    },
+    {
+      "bundleIdentifier" : "com.microsoft.teams2",
+      "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
+      "name" : "Microsoft Teams"
     }
   ],
   "focusFrontmostWindow" : false,
