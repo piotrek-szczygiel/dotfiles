@@ -20,6 +20,8 @@ alias glg "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias gp "git push"
 alias gs "git status"
 
+alias ghb "gh browse"
+
 alias aws-env "bass source aws-helper"
 alias python python3
 
