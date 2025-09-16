@@ -3,7 +3,7 @@ window-height = 40
 
 font-size = 16
 
-theme = dark:catppuccin-mocha,light:catppuccin-latte
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 
 cursor-style-blink = false
 shell-integration-features = no-cursor
