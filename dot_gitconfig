@@ -6,7 +6,7 @@
     whitespace = warn
 
 [core]
-    editor = nvim
+    editor = hx
     autocrlf = input
     pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)"
 
