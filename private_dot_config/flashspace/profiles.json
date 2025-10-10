@@ -7,20 +7,6 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.mitchellh.ghostty",
-              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/AppIcon.icns",
-              "name" : "Ghostty"
-            }
-          ],
-          "display" : "MPG271QX OLED",
-          "id" : "6DB7F971-E73C-4C4E-8A62-EF02AA279898",
-          "name" : "Terminal",
-          "shortcut" : "opt+t",
-          "symbolIconName" : "apple.terminal"
-        },
-        {
-          "apps" : [
-            {
               "bundleIdentifier" : "com.jetbrains.intellij",
               "iconPath" : "/Applications/IntelliJ IDEA.app/Contents/Resources/idea.icns",
               "name" : "IntelliJ IDEA"
@@ -48,22 +34,9 @@
           "display" : "MPG271QX OLED",
           "id" : "1BB367E5-6E97-4CE0-BE64-B01E34DB9682",
           "name" : "Browser",
+          "openAppsOnActivation" : true,
           "shortcut" : "opt+2",
           "symbolIconName" : "globe"
-        },
-        {
-          "apps" : [
-            {
-              "bundleIdentifier" : "io.httpie.desktop",
-              "iconPath" : "/Applications/HTTPie.app/Contents/Resources/icon.icns",
-              "name" : "HTTPie"
-            }
-          ],
-          "display" : "MPG271QX OLED",
-          "id" : "36307EA1-065C-46D7-B370-275CC05526A0",
-          "name" : "Other",
-          "shortcut" : "opt+3",
-          "symbolIconName" : "ellipsis.curlybraces"
         },
         {
           "apps" : [
@@ -81,7 +54,8 @@
           "display" : "DELL S2721DGF",
           "id" : "8B23A7F9-8F04-419C-BE81-8DEC26058368",
           "name" : "Slack",
-          "shortcut" : "opt+4",
+          "openAppsOnActivation" : true,
+          "shortcut" : "opt+3",
           "symbolIconName" : "message.badge"
         }
       ]

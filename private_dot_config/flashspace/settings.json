@@ -7,7 +7,7 @@
   "checkForUpdatesAutomatically" : true,
   "displayMode" : "static",
   "enableFocusManagement" : true,
-  "enableIntegrations" : false,
+  "enableIntegrations" : true,
   "enablePictureInPictureSupport" : true,
   "enableSpaceControl" : false,
   "enableSpaceControlAnimations" : true,
@@ -34,6 +34,11 @@
       "bundleIdentifier" : "com.microsoft.teams2",
       "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
       "name" : "Microsoft Teams"
+    },
+    {
+      "bundleIdentifier" : "com.mitchellh.ghostty",
+      "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
+      "name" : "Ghostty"
     }
   ],
   "focusFrontmostWindow" : false,
@@ -54,10 +59,12 @@
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
   "showFloatingNotifications" : true,
   "showMenuBarIcon" : true,
-  "showMenuBarTitle" : true,
+  "showMenuBarTitle" : false,
+  "showSpaceControl" : "opt+space",
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : false,
-  "spaceControlMaxColumns" : 6,
+  "spaceControlHideEmptyWorkspaces" : false,
+  "spaceControlNumberOfColumns" : 0,
   "spaceControlUpdateScreenshotsOnOpen" : false,
   "swipeDown3FingerAction" : "none",
   "swipeDown4FingerAction" : "none",
@@ -69,6 +76,7 @@
   "swipeUp3FingerAction" : "none",
   "swipeUp4FingerAction" : "none",
   "switchWorkspaceWhenPipCloses" : true,
+  "toggleTheFocusedAppFloating" : "opt+space",
   "workspaceTransitionDimming" : 0.2,
-  "workspaceTransitionDuration" : 0.3
+  "workspaceTransitionDuration" : 0.2
 }
