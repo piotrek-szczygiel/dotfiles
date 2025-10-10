@@ -35,26 +35,13 @@ brew install --quiet --formulae \
     zoxide
 
 brew install --quiet --casks    \
-    1password                   \
-    arc                         \
     betterdisplay               \
-    discord                     \
-    firefox                     \
     font-sf-mono                \
     font-sf-pro                 \
-    google-chrome               \
-    hammerspoon                 \
     httpie                      \
-    intellij-idea               \
-    jordanbaird-ice             \
     karabiner-elements          \
     keepingyouawake             \
-    proxy-audio-device          \
-    raycast                     \
     rectangle-pro               \
-    sf-symbols                  \
-    telegram                    \
-    temurin                     \
-    visual-studio-code
+    sf-symbols
 
 brew upgrade
