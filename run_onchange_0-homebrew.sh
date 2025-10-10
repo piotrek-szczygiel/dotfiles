@@ -6,6 +6,7 @@ if ! command -v brew &> /dev/null; then
 fi
 
 brew tap oven-sh/bun
+brew tap FelixKratz/formulae
 brew update
 
 brew install --quiet --formulae \
@@ -22,11 +23,14 @@ brew install --quiet --formulae \
     git                         \
     git-delta                   \
     httpie                      \
+    lua                         \
     jq                          \
     neovim                      \
     python                      \
     ripgrep                     \
     shellcheck                  \
+    sketchybar                  \
+    switchaudio-osx             \
     tokei                       \
     zoxide
 
@@ -36,6 +40,8 @@ brew install --quiet --casks    \
     betterdisplay               \
     discord                     \
     firefox                     \
+    font-sf-mono                \
+    font-sf-pro                 \
     google-chrome               \
     hammerspoon                 \
     httpie                      \
@@ -46,6 +52,7 @@ brew install --quiet --casks    \
     proxy-audio-device          \
     raycast                     \
     rectangle-pro               \
+    sf-symbols                  \
     telegram                    \
     temurin                     \
     visual-studio-code
