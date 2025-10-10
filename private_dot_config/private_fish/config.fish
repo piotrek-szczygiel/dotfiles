@@ -1,5 +1,5 @@
-set -gx EDITOR hx
-set -gx VISUAL hx
+set -gx EDITOR nvim
+set -gx VISUAL nvim
 
 set -gx PATH "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "$HOME/.bun/bin" /opt/homebrew/bin "$HOME/.bin" $PATH
 
