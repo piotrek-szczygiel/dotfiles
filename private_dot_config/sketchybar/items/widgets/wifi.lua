@@ -47,7 +47,7 @@ local wifi = sbar.add("item", "widgets.wifi.padding", {
 -- Background around the item
 local wifi_bracket = sbar.add("bracket", "widgets.wifi.bracket", { wifi.name, wifi_up.name, wifi_down.name }, {
     background = {
-        color = colors.bg1
+        color = colors.surface_alt
     }
 })
 
@@ -57,8 +57,8 @@ sbar.add("item", {
 })
 
 wifi_up:subscribe("network_update", function(env)
-    local up_color = (env.upload == "0 B/s") and colors.grey or colors.red
-    local down_color = (env.download == "0 B/s") and colors.grey or colors.blue
+    local up_color = (env.upload == "0 B/s") and colors.outline or colors.red
+    local down_color = (env.download == "0 B/s") and colors.outline or colors.blue
     wifi_up:set({
         icon = {
             color = up_color
@@ -85,7 +85,7 @@ wifi:subscribe({ "wifi_change", "system_woke" }, function(env)
         wifi:set({
             icon = {
                 string = connected and icons.wifi.connected or icons.wifi.disconnected,
-                color = connected and colors.white or colors.red
+                color = connected and colors.text or colors.red
             }
         })
     end)

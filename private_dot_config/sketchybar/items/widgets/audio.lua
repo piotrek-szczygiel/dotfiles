@@ -7,7 +7,7 @@ local audio_device_icon = sbar.add("item", "widgets.audio", {
     icon = {
         string = icons.audio.speakers,
         padding_left = 0,
-        color = colors.white,
+        color = colors.text,
         font = {
             style = settings.font.style_map["Regular"],
             size = 16.0
@@ -20,7 +20,7 @@ local audio_device_icon = sbar.add("item", "widgets.audio", {
 
 local volume_bracket = sbar.add("bracket", "widgets.audio.bracket", { audio_device_icon.name }, {
     background = {
-        color = colors.bg1
+        color = colors.surface_alt
     }
 })
 

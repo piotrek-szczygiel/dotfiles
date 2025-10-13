@@ -18,7 +18,7 @@ sbar.exec(flashspace_bin .. " list-workspaces", function(workspace_list)
             local workspace = sbar.add("item", workspace_id, {
                 label = {
                     string = workspace_name,
-                    color = (workspace_name == current) and colors.white or colors.grey
+                    color = (workspace_name == current) and colors.text or colors.outline
                 },
                 click_script = flashspace_bin .. " workspace --name '" .. workspace_name .. "'"
             })
@@ -27,13 +27,13 @@ sbar.exec(flashspace_bin .. " list-workspaces", function(workspace_list)
                 if env.WORKSPACE == workspace_name then
                     workspace:set({
                         label = {
-                            color = colors.white
+                            color = colors.text
                         }
                     })
                 else
                     workspace:set({
                         label = {
-                            color = colors.grey
+                            color = colors.outline
                         }
                     })
                 end
@@ -42,8 +42,8 @@ sbar.exec(flashspace_bin .. " list-workspaces", function(workspace_list)
 
         local bracket = sbar.add("bracket", "flashspace.bracket", workspaces, {
             background = {
-                color = colors.bg2,
-                border_color = colors.black,
+                color = colors.surface,
+                border_color = colors.border,
                 height = 30,
             }
 
@@ -53,7 +53,7 @@ sbar.exec(flashspace_bin .. " list-workspaces", function(workspace_list)
         sbar.add("bracket", { bracket.name }, {
             background = {
                 color = colors.transparent,
-                border_color = colors.grey,
+                border_color = colors.outline,
                 border_width = 1,
                 height = 30,
             },

@@ -6,7 +6,7 @@ sbar.add("item", { position = "right", width = settings.group_paddings })
 
 local cal = sbar.add("item", {
   icon = {
-    color = colors.white,
+    color = colors.text,
     padding_left = 8,
     font = {
       style = settings.font.style_map["Black"],
@@ -14,7 +14,7 @@ local cal = sbar.add("item", {
     },
   },
   label = {
-    color = colors.white,
+    color = colors.text,
     padding_left = 8,
     padding_right = 8,
     width = 80,
@@ -26,8 +26,8 @@ local cal = sbar.add("item", {
   padding_left = 1,
   padding_right = 1,
   background = {
-    color = colors.bg2,
-    border_color = colors.black,
+    color = colors.surface,
+    border_color = colors.border,
     border_width = 1
   },
   click_script = "open -a 'Calendar'"
@@ -38,7 +38,7 @@ sbar.add("bracket", { cal.name }, {
   background = {
     color = colors.transparent,
     height = 30,
-    border_color = colors.grey,
+    border_color = colors.outline,
   }
 })
 

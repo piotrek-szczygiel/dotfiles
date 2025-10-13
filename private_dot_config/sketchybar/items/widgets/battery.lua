@@ -72,7 +72,7 @@ end)
 
 sbar.add("bracket", "widgets.battery.bracket", { battery.name }, {
     background = {
-        color = colors.bg1
+        color = colors.surface_alt
     }
 })
 
