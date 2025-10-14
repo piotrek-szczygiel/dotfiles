@@ -39,6 +39,11 @@
       "bundleIdentifier" : "com.mitchellh.ghostty",
       "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
       "name" : "Ghostty"
+    },
+    {
+      "bundleIdentifier" : "com.jetbrains.intellij",
+      "iconPath" : "/Applications/IntelliJ IDEA.app/Contents/Resources/idea.icns",
+      "name" : "IntelliJ IDEA"
     }
   ],
   "focusFrontmostWindow" : false,
@@ -54,6 +59,7 @@
   "pipScreenCornerOffset" : 15,
   "restartAppOnWakeUp" : false,
   "restoreHiddenAppsOnSwitch" : true,
+  "runScriptAfterWorkspaceChange" : "",
   "runScriptOnLaunch" : "",
   "runScriptOnProfileChange" : "sketchybar --reload",
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
