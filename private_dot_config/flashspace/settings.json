@@ -6,14 +6,14 @@
   "changeWorkspaceOnAppAssign" : true,
   "checkForUpdatesAutomatically" : true,
   "displayMode" : "static",
-  "enableFocusManagement" : true,
+  "enableFocusManagement" : false,
   "enableIntegrations" : true,
   "enablePictureInPictureSupport" : true,
   "enableSpaceControl" : false,
   "enableSpaceControlAnimations" : true,
   "enableSpaceControlTilesAnimations" : true,
   "enableSwipeGestures" : false,
-  "enableWorkspaceTransitions" : false,
+  "enableWorkspaceTransitions" : true,
   "floatingApps" : [
     {
       "bundleIdentifier" : "com.1password.1password",
@@ -36,14 +36,9 @@
       "name" : "Microsoft Teams"
     },
     {
-      "bundleIdentifier" : "com.mitchellh.ghostty",
-      "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
-      "name" : "Ghostty"
-    },
-    {
-      "bundleIdentifier" : "com.jetbrains.intellij",
-      "iconPath" : "/Applications/IntelliJ IDEA.app/Contents/Resources/idea.icns",
-      "name" : "IntelliJ IDEA"
+      "bundleIdentifier" : "com.logi.ghub.agent",
+      "iconPath" : "/Applications/lghub.app/Contents/MacOS/lghub_agent.app/Contents/Resources/icon.icns",
+      "name" : "Logitech G HUB Agent"
     }
   ],
   "focusFrontmostWindow" : false,
@@ -51,6 +46,7 @@
   "focusPreviousWorkspaceWindow" : "opt+tab",
   "keepUnassignedAppsOnSwitch" : false,
   "loopWorkspaces" : true,
+  "loopWorkspacesOnAllDisplays" : false,
   "menuBarDisplayAliases" : "",
   "menuBarTitleTemplate" : "$WORKSPACE",
   "pipApps" : [
@@ -81,8 +77,9 @@
   "swipeThreshold" : 0.2,
   "swipeUp3FingerAction" : "none",
   "swipeUp4FingerAction" : "none",
+  "switchWorkspaceOnCursorScreen" : false,
   "switchWorkspaceWhenPipCloses" : true,
-  "toggleTheFocusedAppFloating" : "opt+space",
-  "workspaceTransitionDimming" : 0.2,
-  "workspaceTransitionDuration" : 0.2
+  "toggleTheFocusedAppFloating" : "ctrl+opt+space",
+  "workspaceTransitionDimming" : 0.1,
+  "workspaceTransitionDuration" : 0.1
 }

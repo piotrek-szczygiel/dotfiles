@@ -9,6 +9,22 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Press Cmd+F12 to run `brew services restart sketchybar`",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f12",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/brew services restart sketchybar" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Brightness control",
                         "manipulators": [
                             {

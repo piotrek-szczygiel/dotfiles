@@ -1,7 +1,15 @@
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
-set -gx PATH "$HOME/Developer/DF/scripts/aws2" "$HOME/Developer/DF/scripts" "$HOME/.bun/bin" /opt/homebrew/bin "$HOME/.bin" $PATH
+set -gx GOPATH "$HOME/go"
+
+fish_add_path "/opt/homebrew/bin"
+fish_add_path "$GOPATH/bin"
+fish_add_path "$HOME/Developer/DF/scripts/aws2"
+fish_add_path "$HOME/Developer/DF/scripts"
+fish_add_path "$HOME/.bun/bin"
+fish_add_path "$HOME/.bin"
+fish_add_path "$HOME/.opencode/bin"
 
 alias q exit
 

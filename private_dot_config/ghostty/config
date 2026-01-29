@@ -3,10 +3,12 @@ window-height = 40
 
 font-size = 16
 
-theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+theme = dark:Black Metal,light:Atom One Light
 
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
-keybind = global:opt+t=toggle_quick_terminal
-keybind = opt+f=toggle_fullscreen
+keybind = global:opt+t=toggle_visibility
+
+# keybind = global:opt+t=toggle_quick_terminal
+# keybind = opt+f=toggle_fullscreen
