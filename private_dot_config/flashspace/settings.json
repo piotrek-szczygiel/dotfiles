@@ -13,7 +13,7 @@
   "enableSpaceControlAnimations" : true,
   "enableSpaceControlTilesAnimations" : true,
   "enableSwipeGestures" : false,
-  "enableWorkspaceTransitions" : true,
+  "enableWorkspaceTransitions" : false,
   "floatingApps" : [
     {
       "bundleIdentifier" : "com.1password.1password",

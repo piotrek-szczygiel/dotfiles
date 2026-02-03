@@ -1,9 +1,10 @@
 window-width = 130
-window-height = 40
+window-height = 35
 
+font-family = "Lilex Nerd Font Mono"
 font-size = 16
 
-theme = dark:Black Metal,light:Atom One Light
+theme = dark:Gruvbox Dark,light:Gruvbox Light
 
 cursor-style-blink = false
 shell-integration-features = no-cursor
