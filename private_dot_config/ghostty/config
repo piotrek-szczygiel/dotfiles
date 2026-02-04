@@ -4,7 +4,7 @@ window-height = 35
 font-family = "Lilex Nerd Font Mono"
 font-size = 15
 
-theme = dark:Ayu Dark,light:Ayu Light
+theme = dark:Ayu,light:Ayu Light
 
 cursor-style-blink = false
 shell-integration-features = no-cursor
