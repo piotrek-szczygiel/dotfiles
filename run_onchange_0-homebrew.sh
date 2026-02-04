@@ -36,12 +36,8 @@ brew install --quiet --formulae \
 
 brew install --quiet --casks    \
     betterdisplay               \
-    font-sf-mono                \
-    font-sf-pro                 \
     httpie                      \
     karabiner-elements          \
     keepingyouawake             \
     rectangle-pro               \
     sf-symbols
-
-brew upgrade
