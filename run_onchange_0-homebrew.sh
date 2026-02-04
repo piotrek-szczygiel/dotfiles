@@ -39,5 +39,4 @@ brew install --quiet --casks    \
     httpie                      \
     karabiner-elements          \
     keepingyouawake             \
-    rectangle-pro               \
-    sf-symbols
+    rectangle-pro
