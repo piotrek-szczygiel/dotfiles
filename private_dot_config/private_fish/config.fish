@@ -3,7 +3,6 @@ set -gx VISUAL nvim
 
 set -gx GOPATH "$HOME/go"
 
-fish_add_path "/opt/homebrew/bin"
 fish_add_path "$GOPATH/bin"
 fish_add_path "$HOME/Developer/DF/scripts/aws2"
 fish_add_path "$HOME/Developer/DF/scripts"
@@ -36,3 +35,6 @@ alias python python3
 
 set fish_greeting
 zoxide init fish | source
+
+# opencode
+fish_add_path /Users/piotr.szczygiel/.opencode/bin

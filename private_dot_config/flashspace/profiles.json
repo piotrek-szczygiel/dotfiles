@@ -37,9 +37,9 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.google.Chrome",
-              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
-              "name" : "Google Chrome"
+              "bundleIdentifier" : "net.imput.helium",
+              "iconPath" : "/Applications/Helium.app/Contents/Resources/app.icns",
+              "name" : "Helium"
             }
           ],
           "display" : "MPG271QX OLED",
