@@ -32,6 +32,7 @@ brew install --quiet --formulae \
     sketchybar                  \
     switchaudio-osx             \
     tokei                       \
+    xh                          \
     zoxide
 
 brew install --quiet --casks    \

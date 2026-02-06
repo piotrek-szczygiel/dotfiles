@@ -38,3 +38,4 @@ zoxide init fish | source
 
 # opencode
 fish_add_path /Users/piotr.szczygiel/.opencode/bin
+fish_add_path /Users/piotr.szczygiel/Developer/DF/difu-refactor/bin
