@@ -7,8 +7,6 @@ fish_add_path "$GOPATH/bin"
 fish_add_path "$HOME/Developer/DF/scripts/aws2"
 fish_add_path "$HOME/Developer/DF/scripts"
 fish_add_path "$HOME/.bun/bin"
-fish_add_path "$HOME/.bin"
-fish_add_path "$HOME/.opencode/bin"
 
 alias q exit
 
@@ -38,4 +36,4 @@ zoxide init fish | source
 
 # opencode
 fish_add_path /Users/piotr.szczygiel/.opencode/bin
-fish_add_path /Users/piotr.szczygiel/Developer/difu-refactor/bin
+fish_add_path /Users/piotr.szczygiel/Developer/difu-refactor
