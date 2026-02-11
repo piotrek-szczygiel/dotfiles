@@ -9,7 +9,6 @@
     editor = nvim
     autocrlf = input
     pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)"
-    excludesfile = /Users/piotr.szczygiel/.config/git/ignore
 
 [push]
     default = simple

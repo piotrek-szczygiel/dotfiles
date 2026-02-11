@@ -1,9 +1,6 @@
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
-set -gx GOPATH "$HOME/go"
-
-fish_add_path "$GOPATH/bin"
 fish_add_path "$HOME/Developer/DF/scripts/aws2"
 fish_add_path "$HOME/Developer/DF/scripts"
 fish_add_path "$HOME/.bun/bin"
@@ -29,11 +26,12 @@ alias ghb "gh browse"
 
 alias tf "terraform"
 
-alias python python3
+alias python "python3"
 
 set fish_greeting
 zoxide init fish | source
 
+source "$HOME/.local/bin/env.fish"
+
 # opencode
 fish_add_path /Users/piotr.szczygiel/.opencode/bin
-fish_add_path /Users/piotr.szczygiel/Developer/difu

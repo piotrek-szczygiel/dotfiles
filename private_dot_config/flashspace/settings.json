@@ -31,14 +31,14 @@
       "name" : "Logitech G HUB"
     },
     {
-      "bundleIdentifier" : "com.microsoft.teams2",
-      "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
-      "name" : "Microsoft Teams"
-    },
-    {
       "bundleIdentifier" : "com.logi.ghub.agent",
       "iconPath" : "/Applications/lghub.app/Contents/MacOS/lghub_agent.app/Contents/Resources/icon.icns",
       "name" : "Logitech G HUB Agent"
+    },
+    {
+      "bundleIdentifier" : "com.microsoft.teams2",
+      "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
+      "name" : "Microsoft Teams"
     }
   ],
   "focusFrontmostWindow" : false,
@@ -61,7 +61,7 @@
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
   "showFloatingNotifications" : true,
   "showMenuBarIcon" : true,
-  "showMenuBarTitle" : false,
+  "showMenuBarTitle" : true,
   "showSpaceControl" : "opt+space",
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : false,
