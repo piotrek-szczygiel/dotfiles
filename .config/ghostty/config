@@ -1,0 +1,9 @@
+window-width = 130
+window-height = 35
+
+theme = dark:Ayu,light:Ayu Light
+
+font-size = 15
+cursor-style-blink = false
+
+keybind = global:opt+t=toggle_visibility

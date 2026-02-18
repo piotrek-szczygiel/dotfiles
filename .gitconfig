@@ -1,0 +1,38 @@
+[user]
+    email = szczygiel.p@gmail.com
+    name = Piotr Szczygieł
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDR5PjSdM3RBmg6MlNazABdkKnm0c5DK6T6tebaASZsd
+
+[core]
+    editor = zed --wait
+    autocrlf = input
+
+[pull]
+    rebase = true
+
+[fetch]
+    prune = true
+
+[diff]
+    algorithm = histogram
+
+[init]
+    defaultBranch = main
+
+[push]
+    autoSetupRemote = true
+
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"

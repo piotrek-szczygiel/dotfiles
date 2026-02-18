@@ -1,0 +1,46 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "ayu-dark",
+  "permission": {
+    "bash": {
+      "*": "ask",
+
+      "git diff*": "allow",
+      "git show*": "allow",
+      "git status*": "allow",
+      "git log*": "allow",
+      "git ls-files*": "allow",
+
+      "cat*": "allow",
+      "grep*": "allow",
+      "make*": "allow",
+      "head*": "allow",
+      "ls*": "allow",
+      "mkdir*": "allow",
+      "jq*": "allow",
+      "rg*": "allow",
+      "sort*": "allow",
+      "tail*": "allow",
+      "uv*": "allow",
+      "wc*": "allow",
+
+      "sudo*": "deny",
+      "chmod*": "deny",
+      "chown*": "deny"
+    }
+  },
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://192.168.100.125:11434/v1"
+      },
+      "models": {
+        "glm-4.7-flash:32k": {
+          "name": "GLM 4.7 Flash 32k"
+        }
+      }
+    }
+  }
+}

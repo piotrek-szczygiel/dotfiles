@@ -1,0 +1,85 @@
+{
+  "activeWorkspaceOnFocusChange" : true,
+  "alternativeDisplays" : "",
+  "centerCursorOnFocusChange" : false,
+  "centerCursorOnWorkspaceChange" : false,
+  "changeWorkspaceOnAppAssign" : true,
+  "checkForUpdatesAutomatically" : true,
+  "displayMode" : "static",
+  "enableFocusManagement" : false,
+  "enableIntegrations" : true,
+  "enablePictureInPictureSupport" : true,
+  "enableSpaceControl" : false,
+  "enableSpaceControlAnimations" : true,
+  "enableSpaceControlTilesAnimations" : true,
+  "enableSwipeGestures" : false,
+  "enableWorkspaceTransitions" : false,
+  "floatingApps" : [
+    {
+      "bundleIdentifier" : "com.1password.1password",
+      "iconPath" : "/Applications/1Password.app/Contents/Resources/icon.icns",
+      "name" : "1Password"
+    },
+    {
+      "bundleIdentifier" : "com.apple.PhotoBooth",
+      "iconPath" : "/System/Applications/Photo Booth.app/Contents/Resources/AppIcon.icns",
+      "name" : "Photo Booth"
+    },
+    {
+      "bundleIdentifier" : "com.logi.ghub",
+      "iconPath" : "/Applications/lghub.app/Contents/Resources/icon.icns",
+      "name" : "Logitech G HUB"
+    },
+    {
+      "bundleIdentifier" : "com.logi.ghub.agent",
+      "iconPath" : "/Applications/lghub.app/Contents/MacOS/lghub_agent.app/Contents/Resources/icon.icns",
+      "name" : "Logitech G HUB Agent"
+    },
+    {
+      "bundleIdentifier" : "com.microsoft.teams2",
+      "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
+      "name" : "Microsoft Teams"
+    }
+  ],
+  "focusFrontmostWindow" : false,
+  "focusNextWorkspaceWindow" : "opt+`",
+  "focusPreviousWorkspaceWindow" : "opt+tab",
+  "keepUnassignedAppsOnSwitch" : false,
+  "loopWorkspaces" : true,
+  "loopWorkspacesOnAllDisplays" : false,
+  "menuBarDisplayAliases" : "",
+  "menuBarTitleTemplate" : "$WORKSPACE",
+  "pipApps" : [
+
+  ],
+  "pipScreenCornerOffset" : 15,
+  "restartAppOnWakeUp" : false,
+  "restoreHiddenAppsOnSwitch" : true,
+  "runScriptAfterWorkspaceChange" : "",
+  "runScriptOnLaunch" : "",
+  "runScriptOnProfileChange" : "",
+  "runScriptOnWorkspaceChange" : "",
+  "showFloatingNotifications" : true,
+  "showMenuBarIcon" : true,
+  "showMenuBarTitle" : true,
+  "showSpaceControl" : "opt+space",
+  "skipEmptyWorkspacesOnSwitch" : false,
+  "spaceControlCurrentDisplayWorkspaces" : false,
+  "spaceControlHideEmptyWorkspaces" : false,
+  "spaceControlNumberOfColumns" : 0,
+  "spaceControlUpdateScreenshotsOnOpen" : false,
+  "swipeDown3FingerAction" : "none",
+  "swipeDown4FingerAction" : "none",
+  "swipeLeft3FingerAction" : "previousWorkspace",
+  "swipeLeft4FingerAction" : "none",
+  "swipeRight3FingerAction" : "nextWorkspace",
+  "swipeRight4FingerAction" : "none",
+  "swipeThreshold" : 0.2,
+  "swipeUp3FingerAction" : "none",
+  "swipeUp4FingerAction" : "none",
+  "switchWorkspaceOnCursorScreen" : false,
+  "switchWorkspaceWhenPipCloses" : true,
+  "toggleTheFocusedAppFloating" : "ctrl+opt+space",
+  "workspaceTransitionDimming" : 0.1,
+  "workspaceTransitionDuration" : 0.1
+}
