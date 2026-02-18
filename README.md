@@ -4,17 +4,32 @@ Managed with [yadm](https://yadm.io/).
 
 ## Setup on a new machine
 
-### 1. Install yadm
+### 1. Install zerobrew and setup shell
 
 ```bash
-brew install yadm
+curl -fsSL https://zerobrew.rs/install | bash
+zb install fish
+which fish | sudo tee -a /etc/shells
+chsh -s $(which fish)
 ```
+
+Close & Re-open the terminal to use fish shell.
+
+```bash
+zb init
+curl -s "https://get.sdkman.io" | bash
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
+fisher install jorgebucaran/fisher reitzig/sdkman-for-fish
+```
+
+Close & Re-open the terminal again.
 
 ### 2. Clone and configure
 
 Clone via HTTPS (SSH won't be available yet):
 
 ```bash
+zb install yadm
 yadm clone https://github.com/piotrek-szczygiel/dotfiles
 ```
 
@@ -27,16 +42,15 @@ yadm remote set-url origin git@github.com:piotrek-szczygiel/dotfiles
 ### 3. Install common tools
 
 ```bash
-brew install coreutils eza fd fish fzf gh git jq ripgrep tokei uv wget xh yq zoxide
+zb install coreutils eza fd fish fzf gh git jq ripgrep tokei uv wget xh yq zoxide
 curl -fsSL https://opencode.ai/install | bash
-curl -s "https://get.sdkman.io" | bash
 sdk install java 25-tem
 ```
 
 ### 4. Install work-related tools
 
 ```bash
-brew install awscli kubectx tfswitch
+zb install awscli cosign kubectx tenv
 ```
 
 ### 5. Install common applications
@@ -57,5 +71,4 @@ brew install awscli kubectx tfswitch
 ### 6. Install work-related applications
 
 - [Microsoft Outlook](https://apps.apple.com/app/microsoft-outlook/id985367838)
-- [Microsoft Teams](https://www.microsoft.com/en/microsoft-teams/download-app)
 - [Slack](https://slack.com/downloads/mac)

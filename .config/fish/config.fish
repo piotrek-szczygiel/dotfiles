@@ -1,7 +1,8 @@
 set -gx EDITOR "zed --wait"
 set -gx VISUAL "zed --wait"
 
-alias q exit
+fish_add_path ~/.local/bin
+fish_add_path ~/.opencode/bin
 
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
@@ -20,6 +21,7 @@ alias gs "git status"
 
 alias tf "terraform"
 alias python "python3"
+alias q exit
 
 set fish_greeting
 zoxide init fish | source
