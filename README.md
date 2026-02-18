@@ -63,6 +63,7 @@ zb install awscli cosign kubectx tenv
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 - [KeepingYouAwake](https://keepingyouawake.app/)
+- [LinearMouse](https://linearmouse.app/)
 - [OrbStack](https://orbstack.dev/download)
 - [Raycast](https://www.raycast.com/)
 - [Rectangle Pro](https://rectangleapp.com/pro)
