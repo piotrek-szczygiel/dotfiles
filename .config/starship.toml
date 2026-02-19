@@ -63,6 +63,7 @@ crust = "#11111b"
 [os]
 disabled = false
 style = "bg:surface0 fg:text"
+format = "[$symbol ]($style)"
 
 [os.symbols]
 Windows = "󰍲"
@@ -86,10 +87,10 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [username]
-show_always = true
+show_always = false
 style_user = "bg:surface0 fg:text"
 style_root = "bg:surface0 fg:text"
-format = '[ $user ]($style)'
+format = "[$user ]($style)"
 
 [directory]
 style = "fg:mantle bg:peach"
@@ -160,9 +161,10 @@ style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
 [docker_context]
+disabled = true
 symbol = ""
-style = "bg:mantle"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+style = "bg:blue"
+format = '[[ $symbol( $context) ](fg:base bg:blue)]($style)'
 
 [time]
 disabled = false
