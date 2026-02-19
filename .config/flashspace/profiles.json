@@ -37,9 +37,9 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "net.imput.helium",
-              "iconPath" : "/Applications/Helium.app/Contents/Resources/app.icns",
-              "name" : "Helium"
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
             }
           ],
           "display" : "MPG271QX OLED",
@@ -48,35 +48,6 @@
           "openAppsOnActivation" : true,
           "shortcut" : "opt+3",
           "symbolIconName" : "globe.americas.fill"
-        },
-        {
-          "apps" : [
-            {
-              "bundleIdentifier" : "com.microsoft.teams2",
-              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
-              "name" : "Microsoft Teams"
-            }
-          ],
-          "display" : "MPG271QX OLED",
-          "id" : "3456539A-5578-4F12-9566-892049ACEE80",
-          "name" : "Teams",
-          "openAppsOnActivation" : false,
-          "shortcut" : "opt+4"
-        },
-        {
-          "apps" : [
-            {
-              "bundleIdentifier" : "ai.opencode.desktop",
-              "iconPath" : "/Applications/OpenCode.app/Contents/Resources/icon.icns",
-              "name" : "OpenCode"
-            }
-          ],
-          "display" : "DELL S2721DGF",
-          "id" : "F3C9BF54-B533-454C-985B-B15A9395E6FA",
-          "name" : "OpenCode",
-          "openAppsOnActivation" : false,
-          "shortcut" : "opt+q",
-          "symbolIconName" : "inset.filled.square"
         },
         {
           "apps" : [
@@ -95,7 +66,7 @@
           "id" : "8B23A7F9-8F04-419C-BE81-8DEC26058368",
           "name" : "Slack",
           "openAppsOnActivation" : true,
-          "shortcut" : "opt+w",
+          "shortcut" : "opt+4",
           "symbolIconName" : "message.badge.filled.fill"
         }
       ]

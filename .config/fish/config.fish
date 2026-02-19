@@ -3,6 +3,7 @@ set -gx VISUAL "zed --wait"
 
 fish_add_path ~/.local/bin
 fish_add_path ~/.opencode/bin
+fish_add_path ~/Developer/difu/bin
 
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
@@ -20,8 +21,8 @@ alias gp "git push"
 alias gs "git status"
 
 alias tf "terraform"
-alias python "python3"
 alias q exit
 
 set fish_greeting
 zoxide init fish | source
+starship init fish | source

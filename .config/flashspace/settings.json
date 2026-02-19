@@ -1,10 +1,15 @@
 {
   "activeWorkspaceOnFocusChange" : true,
   "alternativeDisplays" : "",
+  "autoAssignAlreadyAssignedApps" : false,
+  "autoAssignAppsToWorkspaces" : false,
   "centerCursorOnFocusChange" : false,
   "centerCursorOnWorkspaceChange" : false,
   "changeWorkspaceOnAppAssign" : true,
   "checkForUpdatesAutomatically" : true,
+  "cornerHiddenApps" : [
+
+  ],
   "displayMode" : "static",
   "enableFocusManagement" : false,
   "enableIntegrations" : true,
@@ -62,6 +67,7 @@
   "showFloatingNotifications" : true,
   "showMenuBarIcon" : true,
   "showMenuBarTitle" : true,
+  "showRecentWorkspaceWhenActivatedTwice" : false,
   "showSpaceControl" : "opt+space",
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : false,
