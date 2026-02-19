@@ -43,9 +43,9 @@ yadm remote set-url origin git@github.com:piotrek-szczygiel/dotfiles
 
 ```bash
 zb install coreutils eza fd fish fzf gh git jq ripgrep starship tokei uv wget xh yq zoxide
-curl -fsSL https://opencode.ai/install | bash
-sdk install java 25-tem
+sdk install java 21.0.10-amzn
 uv python install --default
+curl -fsSL https://opencode.ai/install | bash
 ```
 
 ### 4. Install work-related tools
