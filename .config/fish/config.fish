@@ -23,6 +23,9 @@ alias gs "git status"
 alias tf "terraform"
 alias q exit
 
-set fish_greeting
+function fish_greeting
+    fastfetch -s title:separator:uptime:cpu:gpu:memory:disk --logo small
+end
+
 zoxide init fish | source
 starship init fish | source
