@@ -68,6 +68,7 @@ zb install awscli cosign kubectx tenv
 - [OrbStack](https://orbstack.dev/download)
 - [Raycast](https://www.raycast.com/)
 - [Rectangle Pro](https://rectangleapp.com/pro)
+- [Stats](https://mac-stats.com/)
 - [Zed](https://zed.dev/download)
 
 ### 6. Install work-related applications
