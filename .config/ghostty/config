@@ -1,11 +1,9 @@
 window-width = 130
-window-height = 35
+window-height = 40
 
 theme = dark:Ayu,light:Ayu Light
 
-font-size = 15
-
-cursor-style-blink = false
-shell-integration-features = no-cursor
+font-family = "Maple Mono NF"
+font-size = 14
 
 keybind = global:opt+t=toggle_visibility
