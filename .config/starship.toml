@@ -7,8 +7,7 @@ $username\
 [](bg:color_yellow fg:color_orange)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
-$git_branch\
-$git_status\
+$time\
 [](fg:color_aqua bg:color_blue)\
 $c\
 $cpp\
@@ -25,7 +24,8 @@ $docker_context\
 $conda\
 $pixi\
 [](fg:color_bg3 bg:color_bg1)\
-$time\
+$git_branch\
+$git_status\
 [ ](fg:color_bg1)\
 $line_break$character"""
 
@@ -93,12 +93,12 @@ truncate_to_repo = false
 
 [git_branch]
 symbol = ""
-style = "bg:color_aqua"
-format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+style = "bg:color_bg1"
+format = '[[ $symbol $branch ](fg:color_fg0 bg:color_bg1)]($style)'
 
 [git_status]
-style = "bg:color_aqua"
-format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+style = "bg:color_bg1"
+format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_bg1)]($style)'
 
 [nodejs]
 symbol = ""
@@ -165,10 +165,10 @@ style = "bg:color_bg3"
 format = '[[ $symbol( $version)( $environment) ](fg:color_fg0 bg:color_bg3)]($style)'
 
 [time]
-disabled = false
+disabled = true
 time_format = "%R"
-style = "bg:color_bg1"
-format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+style = "bg:color_aqua"
+format = '[[  $time ](fg:color_fg0 bg:color_aqua)]($style)'
 
 [line_break]
 disabled = false
