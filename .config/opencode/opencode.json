@@ -22,11 +22,7 @@
       "sort*": "allow",
       "tail*": "allow",
       "uv*": "allow",
-      "wc*": "allow",
-
-      "sudo*": "deny",
-      "chmod*": "deny",
-      "chown*": "deny"
+      "wc*": "allow"
     }
   },
   "provider": {
