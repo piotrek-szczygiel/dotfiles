@@ -1,9 +1,19 @@
 window-width = 130
-window-height = 37
+window-height = 40
+window-padding-x = 10
+window-padding-y = 10
+window-colorspace = display-p3
 
 theme = dark:Ayu,light:Ayu Light
 
 font-family = "Maple Mono NF"
 font-size = 14
+#font-thicken = true
+
+macos-non-native-fullscreen = true
+confirm-close-surface = false
+
+adjust-cursor-thickness = 4
 
 keybind = global:opt+t=toggle_visibility
+keybind = opt+f=toggle_fullscreen
