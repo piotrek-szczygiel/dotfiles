@@ -8,12 +8,11 @@ theme = dark:Ayu,light:Ayu Light
 
 font-family = "Maple Mono NF"
 font-size = 14
-#font-thicken = true
 
-macos-non-native-fullscreen = true
-confirm-close-surface = false
-
+font-thicken = false
 adjust-cursor-thickness = 4
 
-keybind = global:opt+t=toggle_visibility
+confirm-close-surface = false
+
+macos-non-native-fullscreen = true
 keybind = opt+f=toggle_fullscreen

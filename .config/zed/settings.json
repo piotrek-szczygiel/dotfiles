@@ -21,6 +21,11 @@
     "dark": "JetBrains New UI Icons (Dark)"
   },
 
+  "terminal": {
+    "font_size": 13.0,
+    "font_family": "Maple Mono NF"
+  },
+
   "file_scan_exclusions": [
     "**/.git",
     "**/.svn",
