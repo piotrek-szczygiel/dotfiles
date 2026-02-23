@@ -2,59 +2,57 @@
 
 Managed with [yadm](https://yadm.io/).
 
-## Setup on a new machine
+## Setup on a new MacOS machine
 
-### 1. Install zerobrew and setup shell
+### 1. Install essential tools and setup fish shell
 
 ```bash
-curl -fsSL https://zerobrew.rs/install | bash
-zb install fish
-which fish | sudo tee -a /etc/shells
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Install common CLI tools
+brew install coreutils eza fastfetch fd fish fzf gh git jq ripgrep starship tokei uv wget xh yadm yq zoxide
+
+# Install opencode
+curl -fsSL https://opencode.ai/install | bash
+
+# Install fish and set it as a default shell
+brew install fish
+which fish | sudo tee -a /etc/shells # Feel free to `cat /etc/shells` first to check if it's already there
 chsh -s $(which fish)
-```
 
-Close & Re-open the terminal to use fish shell.
-
-```bash
-zb init
-curl -s "https://get.sdkman.io" | bash
+# Install fish plugin manager
+exec fish -l
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
-fisher install jorgebucaran/fisher reitzig/sdkman-for-fish
+fisher install jorgebucaran/fisher
 ```
 
-Close & Re-open the terminal again.
+### 2. Clone dotfiles
 
-### 2. Clone and configure
-
-Clone via HTTPS (SSH won't be available yet):
+We might not have SSH access yet, so we use HTTPS for cloning.
 
 ```bash
-zb install yadm
 yadm clone https://github.com/piotrek-szczygiel/dotfiles
-```
-
-Then switch the remote to SSH:
-
-```bash
 yadm remote set-url origin git@github.com:piotrek-szczygiel/dotfiles
 ```
 
-### 3. Install common tools
+### 3. Install non-essential tools
 
 ```bash
-zb install coreutils eza fastfetch fd fish fzf gh git jq ripgrep starship tokei uv wget xh yq zoxide
-sdk install java 21.0.10-amzn
+# DevOps stuff
+brew install awscli cosign kubectx tenv
+
+# Python
 uv python install --default
-curl -fsSL https://opencode.ai/install | bash
+
+# Java
+curl -s "https://get.sdkman.io" | bash
+fisher install reitzig/sdkman-for-fish
+sdk install java 21.0.10-amzn # 25-tem
 ```
 
-### 4. Install work-related tools
-
-```bash
-zb install awscli cosign kubectx tenv
-```
-
-### 5. Install common applications
+### 4. Install common applications
 
 - [1Password](https://1password.com/downloads)
 - [BetterDisplay](https://github.com/waydabber/BetterDisplay/releases)
@@ -71,7 +69,7 @@ zb install awscli cosign kubectx tenv
 - [Stats](https://mac-stats.com/)
 - [Zed](https://zed.dev/download)
 
-### 6. Install work-related applications
+### 5. Install work-related applications
 
 - [Microsoft Outlook](https://apps.apple.com/app/microsoft-outlook/id985367838)
 - [Slack](https://slack.com/downloads/mac)
