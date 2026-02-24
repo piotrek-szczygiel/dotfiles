@@ -5,18 +5,23 @@
     "bash": {
       "*": "ask",
 
+      "./mvnw*": "allow",
+
       "git diff*": "allow",
       "git show*": "allow",
       "git status*": "allow",
       "git log*": "allow",
       "git ls-files*": "allow",
 
+      "bun*": "allow",
       "cat*": "allow",
       "grep*": "allow",
       "make*": "allow",
       "head*": "allow",
       "ls*": "allow",
       "mkdir*": "allow",
+      "jar*": "allow",
+      "javap*": "allow",
       "jq*": "allow",
       "rg*": "allow",
       "sort*": "allow",
