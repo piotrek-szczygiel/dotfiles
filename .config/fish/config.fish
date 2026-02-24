@@ -1,6 +1,7 @@
 set -gx EDITOR "zed --wait"
 set -gx VISUAL "zed --wait"
 
+fish_add_path ~/.bun/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/.opencode/bin
 fish_add_path ~/Developer/difu/bin
