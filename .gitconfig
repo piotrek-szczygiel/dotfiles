@@ -8,7 +8,7 @@
     autocrlf = input
 
 [pull]
-    rebase = true
+    rebase = false
 
 [fetch]
     prune = true

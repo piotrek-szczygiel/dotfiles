@@ -16,3 +16,5 @@ confirm-close-surface = false
 
 macos-non-native-fullscreen = true
 keybind = opt+f=toggle_fullscreen
+
+working-directory = /Users/piotr.szczygiel/Developer
