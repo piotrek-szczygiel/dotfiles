@@ -20,14 +20,21 @@
       "head*": "allow",
       "ls*": "allow",
       "mkdir*": "allow",
+      "nohup*": "allow",
+      "pgrep*": "allow",
       "jar*": "allow",
       "javap*": "allow",
       "jq*": "allow",
       "rg*": "allow",
+      "sleep*": "allow",
       "sort*": "allow",
+      "ss*": "allow",
       "tail*": "allow",
       "uv*": "allow",
       "wc*": "allow"
+    },
+    "external_directory": {
+      "/tmp/**": "allow"
     }
   },
   "provider": {
