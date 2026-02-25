@@ -5,6 +5,8 @@
     "bash": {
       "*": "ask",
 
+      "sudo*": "deny",
+
       "./mvnw*": "allow",
 
       "git diff*": "allow",
