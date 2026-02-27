@@ -11,10 +11,12 @@
       "gh*": "allow",
 
       "git diff*": "allow",
+      "git fetch*": "allow",
       "git show*": "allow",
       "git status*": "allow",
       "git log*": "allow",
       "git ls-files*": "allow",
+      "git ls-tree*": "allow",
 
       "bun*": "allow",
       "cat*": "allow",
