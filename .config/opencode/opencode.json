@@ -36,6 +36,7 @@
       "wc*": "allow",
       "which*": "allow",
 
+      "git branch --all*": "allow",
       "git branch --show-current*": "allow",
       "git diff*": "allow",
       "git fetch*": "allow",
