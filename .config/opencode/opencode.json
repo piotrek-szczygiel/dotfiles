@@ -58,7 +58,8 @@
       "gh issue view*": "allow",
       "gh issue status*": "allow",
       "gh search prs*": "allow",
-      "gh search issues*": "allow"
+      "gh search issues*": "allow",
+      "gh search repos*": "allow"
     },
     "external_directory": {
       "/tmp/**": "allow"
