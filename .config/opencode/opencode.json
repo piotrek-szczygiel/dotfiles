@@ -47,6 +47,7 @@
       "git remote -v*": "allow",
       "git rev-parse*": "allow",
 
+      "gh api repos*": "allow",
       "gh auth status*": "allow",
       "gh repo view*": "allow",
       "gh pr list*": "allow",
