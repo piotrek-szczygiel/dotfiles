@@ -29,3 +29,6 @@
 
 [include]
     path = ~/.gitconfig.os
+
+[alias]
+    main = !git checkout main 2>/dev/null || git checkout master
