@@ -36,6 +36,8 @@
       "wc*": "allow",
       "which*": "allow",
 
+      "git add*": "allow",
+      "git commit*": "allow",
       "git branch --all*": "allow",
       "git branch --show-current*": "allow",
       "git diff*": "allow",
