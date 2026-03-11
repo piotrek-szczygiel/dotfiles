@@ -6,7 +6,7 @@
 
       "sudo*": "deny",
 
-      "./mvnw *": "allow",
+      "./mvnw*": "allow",
 
       "basename*": "allow",
       "bun*": "allow",
@@ -15,6 +15,7 @@
       "file*": "allow",
       "grep*": "allow",
       "make*": "allow",
+      "mvn*": "allow",
       "head*": "allow",
       "ls*": "allow",
       "mkdir*": "allow",

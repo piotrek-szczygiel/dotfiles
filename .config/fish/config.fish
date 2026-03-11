@@ -1,5 +1,6 @@
 set -gx EDITOR "zed --wait"
 set -gx VISUAL "zed --wait"
+set -gx TENV_AUTO_INSTALL "true"
 
 fish_add_path ~/.bun/bin
 fish_add_path ~/.local/bin
