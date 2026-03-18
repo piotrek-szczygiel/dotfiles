@@ -5,7 +5,7 @@ set -gx TENV_AUTO_INSTALL "true"
 fish_add_path ~/.bun/bin
 fish_add_path ~/.local/bin
 fish_add_path ~/.opencode/bin
-fish_add_path ~/Developer/difu/bin
+fish_add_path ~/Developer/slfulfi/scripts/difu/bin
 
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"

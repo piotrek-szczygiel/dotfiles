@@ -25,12 +25,17 @@
               "bundleIdentifier" : "dev.zed.Zed",
               "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
               "name" : "Zed"
+            },
+            {
+              "bundleIdentifier" : "com.t3tools.t3code",
+              "iconPath" : "/Applications/T3 Code (Alpha).app/Contents/Resources/icon.icns",
+              "name" : "T3 Code (Alpha)"
             }
           ],
           "display" : "MPG271QX OLED",
           "id" : "65113A2D-1C36-48DD-9B25-54AD1A047842",
           "name" : "Zed",
-          "openAppsOnActivation" : true,
+          "openAppsOnActivation" : false,
           "shortcut" : "opt+2",
           "symbolIconName" : "z.square.fill"
         },
