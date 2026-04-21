@@ -29,5 +29,7 @@ function fish_greeting
     fastfetch -s title:separator:uptime:cpu:gpu:memory:disk --logo small
 end
 
+source ~/.vite-plus/env.fish
+
 zoxide init fish | source
 starship init fish | source
