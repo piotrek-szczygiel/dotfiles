@@ -25,6 +25,10 @@ alias gs "git status"
 alias tf "terraform"
 alias q exit
 
+if not command -q zed
+    alias zed "zeditor"
+end
+
 function fish_greeting
     fastfetch -s title:separator:uptime:cpu:gpu:memory:disk --logo small
 end
