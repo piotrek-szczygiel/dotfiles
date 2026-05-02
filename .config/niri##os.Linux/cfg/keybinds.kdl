@@ -113,6 +113,7 @@ binds {
     // ─── Layout Controls ───
     Mod+CTRL+F                          { expand-column-to-available-width; }
     Mod+C                               { center-column; }
+    Mod+Shift+C                         { spawn-sh "niri msg action move-window-to-floating && sleep 0.05 && niri msg action set-window-width 60% && niri msg action set-window-height 80% && sleep 0.05 && niri msg action center-window"; }
     Mod+CTRL+C                          { center-visible-columns; }
     Mod+Minus                           { set-column-width "-10%"; }
     Mod+Equal                           { set-column-width "+10%"; }
