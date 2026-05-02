@@ -4,6 +4,11 @@
 
         background-color "transparent" // <- needed for noctalia-shell to set wallpaper
 
+        // Managed by sync-niri-noctalia-focus-ring.
+        focus-ring {
+            active-color "#ffb3b3"
+        }
+
         preset-column-widths {
             proportion 0.33333
             proportion 0.5

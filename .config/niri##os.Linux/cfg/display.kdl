@@ -9,6 +9,6 @@ output "HDMI-A-1" {
 }
 
 output "DP-1" {
-    mode "2560x1440@360"
+    mode "2560x1440@240"
     scale 1 // No scaling (use 2 for HiDPI)
 }
