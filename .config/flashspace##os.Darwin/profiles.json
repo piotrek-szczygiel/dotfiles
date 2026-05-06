@@ -25,16 +25,6 @@
               "bundleIdentifier" : "dev.zed.Zed",
               "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
               "name" : "Zed"
-            },
-            {
-              "bundleIdentifier" : "com.t3tools.t3code",
-              "iconPath" : "/Applications/T3 Code (Alpha).app/Contents/Resources/icon.icns",
-              "name" : "T3 Code (Alpha)"
-            },
-            {
-              "bundleIdentifier" : "ai.opencode.desktop",
-              "iconPath" : "/Applications/OpenCode.app/Contents/Resources/icon.icns",
-              "name" : "OpenCode"
             }
           ],
           "display" : "MPG271QX OLED",
@@ -70,6 +60,12 @@
               "bundleIdentifier" : "com.microsoft.Outlook",
               "iconPath" : "/Applications/Microsoft Outlook.app/Contents/Resources/Outlook_macOS.icns",
               "name" : "Microsoft Outlook"
+            },
+            {
+              "autoOpen" : true,
+              "bundleIdentifier" : "com.t3tools.t3code",
+              "iconPath" : "/Applications/T3 Code (Alpha).app/Contents/Resources/icon.icns",
+              "name" : "T3 Code (Alpha)"
             }
           ],
           "display" : "DELL S2721DGF",
