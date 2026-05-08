@@ -14,9 +14,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Install common CLI tools
 brew install coreutils eza fastfetch fd fish fzf gh git jq ripgrep starship tokei uv wget xh yadm yq zoxide
 
-# Install opencode
-curl -fsSL https://opencode.ai/install | bash
-
 # Install fish and set it as a default shell
 brew install fish
 which fish | sudo tee -a /etc/shells # Feel free to `cat /etc/shells` first to check if it's already there
