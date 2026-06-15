@@ -1,10 +1,9 @@
-set -gx EDITOR "zed --wait"
-set -gx VISUAL "zed --wait"
+set -gx EDITOR "code --wait"
+set -gx VISUAL "code --wait"
 set -gx TENV_AUTO_INSTALL "true"
 
 fish_add_path ~/.bun/bin
 fish_add_path ~/.local/bin
-fish_add_path ~/Developer/slfulfi/scripts/difu/bin
 
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
@@ -23,10 +22,6 @@ alias gs "git status"
 
 alias tf "terraform"
 alias q exit
-
-if not command -q zed
-    alias zed "zeditor"
-end
 
 function fish_greeting
     fastfetch -s title:separator:uptime:cpu:gpu:memory:disk --logo small
