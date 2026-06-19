@@ -1,0 +1,33 @@
+#!/bin/zsh
+# Steruje jasnoscia wszystkich zewnetrznych monitorow przez DDC (m1ddc).
+# Monitory nie wspieraja odczytu jasnosci (get/max = 0), wiec poziom
+# trzymamy w plikach stanu i uzywamy 'set' (ktore dziala).
+#
+# Uzycie: brightness up | down
+
+M1DDC=/opt/homebrew/bin/m1ddc
+STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/brightness"
+STEP=20
+
+mkdir -p "$STATE_DIR"
+
+case "$1" in
+  up)   delta=$STEP ;;
+  down) delta=-$STEP ;;
+  *)    echo "usage: $0 up|down" >&2; exit 1 ;;
+esac
+
+# Dla kazdego podlaczonego monitora (numery z 'm1ddc display list')
+for d in 1 2; do
+  f="$STATE_DIR/d${d}"
+  if [ -f "$f" ]; then
+    lvl=$(cat "$f")
+  else
+    lvl=50
+  fi
+  lvl=$((lvl + delta))
+  (( lvl > 100 )) && lvl=100
+  (( lvl < 0 ))   && lvl=0
+  "$M1DDC" display $d set luminance $lvl >/dev/null 2>&1
+  echo $lvl > "$f"
+done

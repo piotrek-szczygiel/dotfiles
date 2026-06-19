@@ -1,0 +1,21 @@
+#!/bin/sh
+# Przelacza wyjscie audio (macOS) miedzy A50 Voice a monitorem MSI MPG271QX OLED.
+set -eu
+
+SAS=/opt/homebrew/bin/SwitchAudioSource
+command -v "$SAS" >/dev/null 2>&1 || exit 1
+
+DEV_A="A50 Voice"
+DEV_B="MPG271QX OLED"
+
+current=$("$SAS" -c)
+
+if [ "$current" = "$DEV_A" ]; then
+    next="$DEV_B"
+else
+    next="$DEV_A"
+fi
+
+"$SAS" -t output -s "$next" >/dev/null
+
+osascript -e "display notification \"$next\" with title \"Audio output\"" >/dev/null 2>&1 || true
