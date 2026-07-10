@@ -1,5 +1,5 @@
-set -gx EDITOR "code --wait"
-set -gx VISUAL "code --wait"
+set -gx EDITOR "nvim"
+set -gx VISUAL "nvim"
 set -gx TENV_AUTO_INSTALL "true"
 
 fish_add_path ~/.bun/bin

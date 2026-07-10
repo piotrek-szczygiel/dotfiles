@@ -4,7 +4,6 @@
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDR5PjSdM3RBmg6MlNazABdkKnm0c5DK6T6tebaASZsd
 
 [core]
-    editor = zed --wait
     autocrlf = input
 
 [pull]
