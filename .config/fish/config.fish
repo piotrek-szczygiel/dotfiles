@@ -1,6 +1,7 @@
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
 set -gx TENV_AUTO_INSTALL "true"
+set -g fish_greeting ""
 
 fish_add_path ~/.local/bin
 
@@ -22,11 +23,17 @@ alias gs "git status"
 alias tf "terraform"
 alias q exit
 
-function fish_greeting
-    fastfetch -s title:separator:uptime:cpu:gpu:memory:disk --logo small
+source ~/.vite-plus/env.fish
+zoxide init fish | source
+
+function is_ssh
+    set -q SSH_CONNECTION; or set -q SSH_TTY; or set -q SSH_CLIENT
 end
 
-source ~/.vite-plus/env.fish
+if not is_ssh
+    starship init fish | source
 
-zoxide init fish | source
-starship init fish | source
+    function fish_greeting
+        fastfetch -s title:separator:uptime:cpu:gpu:memory:disk --logo small
+    end
+end
