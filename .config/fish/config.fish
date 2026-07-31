@@ -28,7 +28,7 @@ alias q "exit"
 source "$HOME/.vite-plus/env.fish"
 zoxide init fish | source
 
-if not set -q T3CODE_PROJECT_ROOT
+if test "$hostname" != "hp-server"
     starship init fish | source
 
     function fish_greeting
