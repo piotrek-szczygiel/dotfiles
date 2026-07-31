@@ -1,9 +1,11 @@
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
 set -gx TENV_AUTO_INSTALL "true"
+set -gx BUN_INSTALL "$HOME/.bun"
 set -g fish_greeting ""
 
-fish_add_path ~/.local/bin
+fish_add_path "$HOME/.local/bin"
+fish_add_path "$BUN_INSTALL/bin"
 
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
@@ -21,16 +23,12 @@ alias gp "git push"
 alias gs "git status"
 
 alias tf "terraform"
-alias q exit
+alias q "exit"
 
-source ~/.vite-plus/env.fish
+source "$HOME/.vite-plus/env.fish"
 zoxide init fish | source
 
-function is_ssh
-    set -q SSH_CONNECTION; or set -q SSH_TTY; or set -q SSH_CLIENT
-end
-
-if not is_ssh
+if not set -q T3CODE_PROJECT_ROOT
     starship init fish | source
 
     function fish_greeting
