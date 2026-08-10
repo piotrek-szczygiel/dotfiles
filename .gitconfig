@@ -1,7 +1,6 @@
 [user]
     email = szczygiel.p@gmail.com
     name = Piotr Szczygieł
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDR5PjSdM3RBmg6MlNazABdkKnm0c5DK6T6tebaASZsd
 
 [core]
     autocrlf = input
@@ -22,9 +21,9 @@
     autoSetupRemote = true
 
 [url "git@github.com:"]
-    insteadOf = "gh:"
-    pushInsteadOf = "github:"
-    pushInsteadOf = "git://github.com/"
+    insteadOf = gh:
+    pushInsteadOf = github:
+    pushInsteadOf = git://github.com/
 
 [include]
     path = ~/.gitconfig.os
