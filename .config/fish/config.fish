@@ -25,6 +25,20 @@ alias gs "git status"
 alias tf "terraform"
 alias q "exit"
 
+function b
+    pushd "$HOME/Developer/mote"
+    ./build.bat $argv
+    popd
+end
+
+function run_mote
+    pushd "$HOME/Developer/mote"
+    ./out/mote
+    popd
+end
+
+bind f5 run_mote
+
 source "$HOME/.vite-plus/env.fish"
 zoxide init fish | source
 
