@@ -113,7 +113,7 @@ if test "$hostname" != "hp-server"
         # Align duration on the context line; leave one cell to avoid wrapping.
         set -l width 80
         set -q COLUMNS; and set width $COLUMNS
-        set left (string shorten --visible --max (math "max(1, $width - "(string length -- "$duration")" - 2)") -- "$left")
+        set left (string shorten --max (math "max(1, $width - "(string length -- "$duration")" - 2)") -- "$left")
         set -l padding (math "max(1, $width - "(string length --visible -- "$left")" - "(string length -- "$duration")" - 1)")
         echo -e -n "$hydro_symbol_start$hydro_color_normal$left"
         printf '%*s%s%s%s' $padding '' "$_hydro_color_duration" "$duration" "$hydro_color_normal"
