@@ -12,6 +12,27 @@ if not status is-interactive
     return
 end
 
+# Use the terminal palette for syntax highlighting and completion menus.
+set -g fish_color_normal normal
+set -g fish_color_command green
+set -g fish_color_param normal
+set -g fish_color_quote yellow
+set -g fish_color_redirection cyan
+set -g fish_color_end green
+set -g fish_color_error red
+set -g fish_color_comment brblack
+set -g fish_color_operator cyan
+set -g fish_color_escape cyan
+set -g fish_color_autosuggestion brblack
+set -g fish_color_valid_path --underline
+set -g fish_color_selection --reverse
+set -g fish_color_search_match --reverse
+set -g fish_pager_color_prefix cyan --bold
+set -g fish_pager_color_completion normal
+set -g fish_pager_color_description yellow
+set -g fish_pager_color_progress cyan
+set -g fish_pager_color_selected_background --reverse
+
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
 alias ll "eza --git --icons --group-directories-first -lF"
@@ -62,10 +83,11 @@ if test "$hostname" != "hp-server"
     set -g hydro_color_git yellow
     set -g hydro_color_prompt green
     set -g hydro_color_error red
-    set -g hydro_multiline false
+    set -g hydro_color_duration brblack
+    set -g hydro_multiline true
     set -g hydro_fetch false
-    # Effectively hide command duration (threshold is in milliseconds).
-    set -g hydro_cmd_duration_threshold 999999999999
+    # Show duration only for commands taking at least five seconds.
+    set -g hydro_cmd_duration_threshold 5000
 
     set -l hydro_dir "$__fish_config_dir/vendor/hydro"
     source "$hydro_dir/conf.d/hydro.fish"
