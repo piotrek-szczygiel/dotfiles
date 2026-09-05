@@ -7,6 +7,11 @@ set -g fish_greeting ""
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$BUN_INSTALL/bin"
 
+# Keep non-interactive shells (including Hydro's Git worker) lightweight.
+if not status is-interactive
+    return
+end
+
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
 alias ll "eza --git --icons --group-directories-first -lF"
@@ -45,13 +50,25 @@ end
 
 bind f5 'commandline -r run_mote; commandline -f execute'
 
-source "$HOME/.vite-plus/env.fish"
 zoxide init fish | source
 
 if test "$hostname" != "hp-server"
-    starship init fish | source
+    set -g hydro_symbol_prompt '>'
+    set -g hydro_symbol_git_dirty '*'
+    set -g hydro_symbol_git_ahead '↑'
+    set -g hydro_symbol_git_behind '↓'
+    # ANSI colors follow the terminal's palette.
+    set -g hydro_color_pwd cyan
+    set -g hydro_color_git yellow
+    set -g hydro_color_prompt green
+    set -g hydro_color_error red
+    set -g hydro_multiline false
+    set -g hydro_fetch false
+    # Effectively hide command duration (threshold is in milliseconds).
+    set -g hydro_cmd_duration_threshold 999999999999
 
-    function fish_greeting
-        fastfetch -s title:separator:uptime:cpu:gpu:memory:disk --logo small
-    end
+    set -l hydro_dir "$__fish_config_dir/vendor/hydro"
+    source "$hydro_dir/conf.d/hydro.fish"
+    source "$hydro_dir/functions/fish_prompt.fish"
+    source "$hydro_dir/functions/fish_mode_prompt.fish"
 end
