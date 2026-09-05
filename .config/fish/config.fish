@@ -90,8 +90,7 @@ if test "$hostname" != "hp-server"
     set -g hydro_color_duration brblack
     set -g hydro_multiline true
     set -g hydro_fetch false
-    # Show duration only for commands taking at least five seconds.
-    set -g hydro_cmd_duration_threshold 5000
+    set -g hydro_cmd_duration_threshold 0
 
     set -l hydro_dir "$__fish_config_dir/vendor/hydro"
     source "$hydro_dir/conf.d/hydro.fish"
@@ -100,8 +99,24 @@ if test "$hostname" != "hp-server"
     function fish_prompt --description 'Hydro with a minimal Git icon'
         set -l git_info $$_hydro_git
         if test -n "$git_info"
-            set git_info "  $git_info"
+            set -l separator_color (set_color brblack)
+            set git_info "  $separator_color┊  $_hydro_color_git"" "(string trim --right -- "$git_info")
         end
-        echo -e -n "$_hydro_color_start$hydro_symbol_start$hydro_color_normal$_hydro_color_pwd$_hydro_pwd$hydro_color_normal $_hydro_color_git$git_info$hydro_color_normal$_hydro_color_duration$_hydro_cmd_duration$hydro_color_normal$_hydro_status$hydro_color_normal "
+        set -l left "$_hydro_color_pwd$_hydro_pwd$hydro_color_normal$git_info$hydro_color_normal"
+        set -l duration 0ms
+        if set -q CMD_DURATION; and test "$CMD_DURATION" -lt 1000
+            set duration "$CMD_DURATION"ms
+        else if test -n "$_hydro_cmd_duration"
+            set duration (string trim -- "$_hydro_cmd_duration")
+        end
+
+        # Align duration on the context line; leave one cell to avoid wrapping.
+        set -l width 80
+        set -q COLUMNS; and set width $COLUMNS
+        set left (string shorten --visible --max (math "max(1, $width - "(string length -- "$duration")" - 2)") -- "$left")
+        set -l padding (math "max(1, $width - "(string length --visible -- "$left")" - "(string length -- "$duration")" - 1)")
+        echo -e -n "$hydro_symbol_start$hydro_color_normal$left"
+        printf '%*s%s%s%s' $padding '' "$_hydro_color_duration" "$duration" "$hydro_color_normal"
+        echo -e -n "$_hydro_status$hydro_color_normal "
     end
 end
