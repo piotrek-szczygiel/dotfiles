@@ -1,5 +1,5 @@
-window-width = 130
-window-height = 40
+window-width = 150
+window-height = 50
 window-padding-x = 10
 window-padding-y = 10
 window-colorspace = display-p3
@@ -7,7 +7,7 @@ window-colorspace = display-p3
 theme = dark:Ayu,light:Ayu Light
 
 font-family = "Maple Mono NF"
-font-size = 10
+font-size = 9
 
 font-thicken = false
 adjust-cursor-thickness = 4

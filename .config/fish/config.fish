@@ -25,6 +25,8 @@ alias gs "git status"
 alias tf "terraform"
 alias q "exit"
 
+alias b "./build.bat"
+
 function run_mote
     pushd "$HOME/Developer/mote"
     set -l result 0
@@ -41,7 +43,7 @@ function run_mote
     return $result
 end
 
-bind f5 run_mote
+bind f5 'commandline -r run_mote; commandline -f execute'
 
 source "$HOME/.vite-plus/env.fish"
 zoxide init fish | source
