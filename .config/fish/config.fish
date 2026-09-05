@@ -78,13 +78,13 @@ if test "$hostname" != "hp-server"
     function _prompt_spacing --on-event fish_postexec
         set -g hydro_symbol_start '\n'
     end
-    set -g hydro_symbol_prompt '>'
-    set -g hydro_symbol_git_dirty '*'
+    set -g hydro_symbol_prompt '❯'
+    set -g hydro_symbol_git_dirty '·'
     set -g hydro_symbol_git_ahead '↑'
     set -g hydro_symbol_git_behind '↓'
     # ANSI colors follow the terminal's palette.
-    set -g hydro_color_pwd cyan
-    set -g hydro_color_git yellow
+    set -g hydro_color_pwd normal
+    set -g hydro_color_git cyan
     set -g hydro_color_prompt green
     set -g hydro_color_error red
     set -g hydro_color_duration brblack
@@ -95,6 +95,13 @@ if test "$hostname" != "hp-server"
 
     set -l hydro_dir "$__fish_config_dir/vendor/hydro"
     source "$hydro_dir/conf.d/hydro.fish"
-    source "$hydro_dir/functions/fish_prompt.fish"
     source "$hydro_dir/functions/fish_mode_prompt.fish"
+
+    function fish_prompt --description 'Hydro with a minimal Git icon'
+        set -l git_info $$_hydro_git
+        if test -n "$git_info"
+            set git_info "  $git_info"
+        end
+        echo -e -n "$_hydro_color_start$hydro_symbol_start$hydro_color_normal$_hydro_color_pwd$_hydro_pwd$hydro_color_normal $_hydro_color_git$git_info$hydro_color_normal$_hydro_color_duration$_hydro_cmd_duration$hydro_color_normal$_hydro_status$hydro_color_normal "
+    end
 end
