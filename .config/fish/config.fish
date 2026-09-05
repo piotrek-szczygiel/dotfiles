@@ -74,7 +74,10 @@ bind f5 'commandline -r run_mote; commandline -f execute'
 zoxide init fish | source
 
 if test "$hostname" != "hp-server"
-    set -g hydro_symbol_start '\n'
+    set -g hydro_symbol_start ''
+    function _prompt_spacing --on-event fish_postexec
+        set -g hydro_symbol_start '\n'
+    end
     set -g hydro_symbol_prompt '>'
     set -g hydro_symbol_git_dirty '*'
     set -g hydro_symbol_git_ahead '↑'
