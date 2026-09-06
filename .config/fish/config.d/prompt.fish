@@ -1,6 +1,10 @@
 # Hydro settings and our inline prompt; keep upstream files in vendor/hydro.
 if test "$hostname" != "hp-server"
     set -g hydro_symbol_start ''
+    # Add spacing after a command, keeping the first prompt flush with the top.
+    function _prompt_spacing --on-event fish_postexec
+        set -g hydro_symbol_start '\n'
+    end
     set -g hydro_symbol_prompt '❯'
     set -g hydro_symbol_git_dirty '*'
     set -g hydro_symbol_git_ahead '↑'
@@ -20,6 +24,7 @@ if test "$hostname" != "hp-server"
 
     function fish_prompt --description 'Minimal inline Hydro prompt'
         set -l last_status $status
+        printf '%b' "$hydro_symbol_start"
         set -l git_info (string trim --right -- "$$_hydro_git")
         set -l prompt_color $_hydro_color_prompt
         if test $last_status -ne 0; or string match --quiet '*|*' -- "$_hydro_status"
