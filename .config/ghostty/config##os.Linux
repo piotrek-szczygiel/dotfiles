@@ -7,11 +7,13 @@ window-colorspace = display-p3
 theme = dark:Ayu,light:Ayu Light
 
 font-family = "Maple Mono NF"
-font-size = 9
+font-size = 11
 
 font-thicken = false
 adjust-cursor-thickness = 4
 
 confirm-close-surface = false
+
+mouse-scroll-multiplier = precision:1,discrete:1
 
 working-directory = /home/piotr/Developer
