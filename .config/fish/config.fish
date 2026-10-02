@@ -50,10 +50,6 @@ alias gs "git status"
 alias tf "terraform"
 alias q "exit"
 
-alias b "./build.bat"
-
-bind f5 'commandline -r run_mote; commandline -f execute'
-
 zoxide init fish | source
 
 source "$__fish_config_dir/config.d/prompt.fish"
