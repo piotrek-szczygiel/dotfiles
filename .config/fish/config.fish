@@ -1,11 +1,9 @@
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
 set -gx TENV_AUTO_INSTALL "true"
-set -gx BUN_INSTALL "$HOME/.bun"
 set -g fish_greeting ""
 
 fish_add_path "$HOME/.local/bin"
-fish_add_path "$BUN_INSTALL/bin"
 
 # Keep non-interactive shells (including Hydro's Git worker) lightweight.
 if not status is-interactive
