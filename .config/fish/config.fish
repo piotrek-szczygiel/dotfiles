@@ -7,6 +7,33 @@ set -g fish_greeting ""
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$BUN_INSTALL/bin"
 
+# Keep non-interactive shells (including Hydro's Git worker) lightweight.
+if not status is-interactive
+    return
+end
+
+# Use the terminal palette for syntax highlighting and completion menus.
+set -g fish_color_normal normal
+set -g fish_color_command green
+set -g fish_color_param normal
+set -g fish_color_quote yellow
+set -g fish_color_redirection cyan
+set -g fish_color_end green
+set -g fish_color_error red
+set -g fish_color_comment brblack
+set -g fish_color_operator cyan
+set -g fish_color_escape cyan
+set -g fish_color_autosuggestion brblack
+set -g fish_color_valid_path --underline
+set -g fish_color_selection --reverse
+set -g fish_color_search_match --reverse
+set -g fish_pager_color_prefix cyan --bold
+set -g fish_pager_color_completion normal
+set -g fish_pager_color_description yellow
+set -g fish_pager_color_progress cyan
+set -g fish_pager_color_selected_background --reverse
+
+# Aliases, key bindings and interactive integrations.
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
 alias ll "eza --git --icons --group-directories-first -lF"
@@ -25,13 +52,10 @@ alias gs "git status"
 alias tf "terraform"
 alias q "exit"
 
-source "$HOME/.vite-plus/env.fish"
+alias b "./build.bat"
+
+bind f5 'commandline -r run_mote; commandline -f execute'
+
 zoxide init fish | source
 
-if test "$hostname" != "hp-server"
-    starship init fish | source
-
-    function fish_greeting
-        fastfetch -s title:separator:uptime:cpu:gpu:memory:disk --logo small
-    end
-end
+source "$__fish_config_dir/config.d/prompt.fish"
