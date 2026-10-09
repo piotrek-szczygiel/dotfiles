@@ -1,32 +1,20 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "permission": "allow",
-
-  // Only load the GitHub Copilot provider; every other provider is ignored
-  "enabled_providers": ["github-copilot"],
-
-  "provider": {
-    "github-copilot": {
-      // Only these models are exposed from this provider
-      "whitelist": ["claude-opus-5.5", "claude-sonnet-5.5", "claude-haiku-5.5"]
-    }
-  },
+  "permissions": [{ "action": "*", "resource": "*", "effect": "allow" }],
 
   "model": "github-copilot/claude-opus-5.5",
-  "small_model": "github-copilot/claude-haiku-5.5",
 
-  // Subagents may spawn subagents one level deeper (general -> explore)
-  "subagent_depth": 2,
-
-  "agent": {
-    "plan": { "disable": true },
-    "explore": { "model": "github-copilot/claude-sonnet-5.5" },
-    "general": {
-      "model": "github-copilot/claude-opus-5.5",
-      // general may only delegate to explore, never to another general
-      "permission": { "task": { "*": "deny", "explore": "allow" } }
-    }
+  "agents": {
+    "plan": { "disabled": true },
+    "explore": { "model": "github-copilot/claude-haiku-5.5" },
+    "title": { "model": "github-copilot/claude-haiku-5.5" }
   },
 
-  "compaction": { "prune": true }
+  "experimental": {
+    // Only the GitHub Copilot provider is usable
+    "policies": [
+      { "action": "provider.use", "resource": "*", "effect": "deny" },
+      { "action": "provider.use", "resource": "github-copilot", "effect": "allow" }
+    ]
+  }
 }
