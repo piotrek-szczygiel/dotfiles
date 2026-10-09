@@ -30,7 +30,9 @@ chsh -s "$(command -v fish)"
 
 ## 3. SSH key and dotfiles
 
-Every machine gets its own key; add the public key at https://github.com/settings/keys.
+Every machine gets its own key (used for GitHub and Forgejo); add the public key at
+https://github.com/settings/keys and https://git.szczygiel.dev/user/settings/keys.
+Other SSH hosts go through the 1Password SSH agent (enable it in 1Password → Settings → Developer).
 
 ```sh
 ssh-keygen -t ed25519 -C "$(hostname)"
