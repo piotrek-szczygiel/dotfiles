@@ -37,7 +37,7 @@ alias ll "eza --git --icons --group-directories-first -lF"
 alias la "eza --git --icons --group-directories-first -laF"
 
 alias ga "git add"
-alias gb "git branch --sort=committerdate | tac | grep -v '^\*' | fzf --height=20% | xargs git switch"
+alias gb "git switch"
 alias gc "git commit"
 alias gco "git checkout --"
 alias gd "git diff"
