@@ -28,6 +28,11 @@ function fish_prompt --description 'Minimal inline Hydro prompt'
         set prompt_color $_hydro_color_error
     end
 
+    # Prefix the hostname over SSH so remote shells are easy to tell apart.
+    if set -q SSH_CONNECTION
+        printf '%s%s%s ' (set_color e5c07b) (prompt_hostname) "$hydro_color_normal"
+    end
+
     # Show the directory name without truncation or decorative separators.
     set -l directory (path basename -- "$PWD")
     test "$PWD" = "$HOME"; and set directory '~'
