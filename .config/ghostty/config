@@ -3,6 +3,8 @@ font-family = "Maple Mono NF"
 adjust-cursor-thickness = 4
 window-padding-x = 10
 window-padding-y = 10
+window-width = 140
+window-height = 40
 confirm-close-surface = false
 mouse-scroll-multiplier = discrete:1
 
