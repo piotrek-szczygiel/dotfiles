@@ -1,6 +1,9 @@
 {
-  "permissions": { "defaultMode": "bypassPermissions" },
-  "skipDangerousModePermissionPrompt": true,
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
   "tui": "fullscreen",
-  "theme": "auto"
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "auto",
+  "agentPushNotifEnabled": true
 }
