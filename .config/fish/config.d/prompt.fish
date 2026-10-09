@@ -1,4 +1,3 @@
-# Hydro settings and our inline prompt; the engine lives in hydro.fish.
 set -g hydro_symbol_start ''
 # Add spacing after a command, keeping the first prompt flush with the top.
 function _prompt_spacing --on-event fish_postexec
@@ -6,15 +5,10 @@ function _prompt_spacing --on-event fish_postexec
 end
 set -g hydro_symbol_prompt '❯'
 set -g hydro_symbol_git_dirty '*'
-set -g hydro_symbol_git_ahead '↑'
-set -g hydro_symbol_git_behind '↓'
 set -g hydro_color_pwd b4befe
 set -g hydro_color_git 9399b2
 set -g hydro_color_prompt normal
-set -g hydro_color_error red
 set -g hydro_color_duration brblack
-set -g hydro_multiline false
-set -g hydro_fetch false
 set -g hydro_cmd_duration_threshold 3000
 
 source "$__fish_config_dir/config.d/hydro.fish"
@@ -28,17 +22,15 @@ function fish_prompt --description 'Minimal inline Hydro prompt'
         set prompt_color $_hydro_color_error
     end
 
-    # Prefix the hostname over SSH so remote shells are easy to tell apart.
     if set -q SSH_CONNECTION
         printf '%s%s%s ' (set_color e5c07b) (prompt_hostname) "$hydro_color_normal"
     end
 
-    # Show the directory name without truncation or decorative separators.
     set -l directory (path basename -- "$PWD")
     test "$PWD" = "$HOME"; and set directory '~'
     printf '%s%s%s' "$_hydro_color_pwd" "$directory" "$hydro_color_normal"
     if test -n "$git_info"
-        # Colour only Hydro's trailing ahead/behind counts, never branch text.
+        # Colour only the ahead/behind counts.
         set -l upstream_color (set_color e5c07b)
         set git_info (string replace --regex '( [↑↓][0-9]+(?: [↑↓][0-9]+)?)$' "$upstream_color"'$1' -- "$git_info")
         printf '  %s %s%s' "$_hydro_color_git" "$git_info" "$hydro_color_normal"

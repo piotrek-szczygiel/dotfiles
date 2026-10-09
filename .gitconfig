@@ -22,8 +22,6 @@
 
 [url "git@github.com:"]
     insteadOf = gh:
-    pushInsteadOf = github:
-    pushInsteadOf = git://github.com/
 
 [url "git@git.szczygiel.dev:"]
     insteadOf = fj:

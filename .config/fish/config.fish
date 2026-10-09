@@ -30,8 +30,7 @@ set -g fish_pager_color_description yellow
 set -g fish_pager_color_progress cyan
 set -g fish_pager_color_selected_background --reverse
 
-# Aliases, key bindings and interactive integrations.
-alias l "eza  --git --icons --group-directories-first"
+alias l "eza --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
 alias ll "eza -lF --git --icons --group-directories-first"
 alias la "eza -laF --git --icons --group-directories-first"

@@ -7,7 +7,7 @@ Minimal terminal + git + AI agents setup for Linux and macOS, managed with [yadm
 **Linux (Arch / CachyOS)**
 
 ```sh
-sudo pacman -S fish git yadm eza zoxide fd neovim ghostty
+sudo pacman -S fish git yadm eza zoxide fd ripgrep neovim ghostty
 paru -S maplemono-nf
 ```
 
@@ -17,7 +17,7 @@ paru -S maplemono-nf
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew install fish git yadm eza zoxide fd neovim
+brew install fish git yadm eza zoxide fd ripgrep neovim
 brew install --cask ghostty font-maple-mono-nf 1password betterdisplay google-chrome karabiner-elements
 ```
 
@@ -45,6 +45,8 @@ yadm clone git@github.com:piotrek-szczygiel/dotfiles
 
 ```sh
 curl -fsSL https://opencode.ai/v2/install | bash
+curl -fsSL https://claude.ai/install.sh | bash
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
 ```
 
 ## Per-machine overrides
