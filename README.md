@@ -7,7 +7,7 @@ Minimal terminal + git + AI agents setup for Linux and macOS, managed with [yadm
 **Linux (Arch / CachyOS)**
 
 ```sh
-sudo pacman -S fish git yadm eza zoxide fzf neovim ghostty
+sudo pacman -S fish git yadm eza zoxide fd neovim ghostty
 paru -S maplemono-nf
 ```
 
@@ -17,7 +17,7 @@ paru -S maplemono-nf
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew install fish git yadm eza zoxide fzf neovim
+brew install fish git yadm eza zoxide fd neovim
 brew install --cask ghostty font-maple-mono-nf 1password betterdisplay google-chrome karabiner-elements
 ```
 
