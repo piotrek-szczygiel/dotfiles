@@ -48,6 +48,7 @@
                         "product_id": 6791,
                         "vendor_id": 2821
                     },
+                    "ignore": false,
                     "simple_modifications": [
                         {
                             "from": {
