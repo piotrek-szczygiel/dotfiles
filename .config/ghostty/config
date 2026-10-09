@@ -1,0 +1,10 @@
+theme = dark:Ayu,light:Ayu Light
+font-family = "Maple Mono NF"
+adjust-cursor-thickness = 4
+window-padding-x = 10
+window-padding-y = 10
+confirm-close-surface = false
+mouse-scroll-multiplier = discrete:1
+
+# Per-machine overrides, not tracked by yadm.
+config-file = ?local

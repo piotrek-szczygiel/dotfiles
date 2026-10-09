@@ -1,4 +1,4 @@
-# Hydro settings and our inline prompt; keep upstream files in vendor/hydro.
+# Hydro settings and our inline prompt; the engine lives in hydro.fish.
 if test "$hostname" != "hp-server"
     set -g hydro_symbol_start ''
     # Add spacing after a command, keeping the first prompt flush with the top.
@@ -18,9 +18,7 @@ if test "$hostname" != "hp-server"
     set -g hydro_fetch false
     set -g hydro_cmd_duration_threshold 3000
 
-    set -l hydro_dir "$__fish_config_dir/vendor/hydro"
-    source "$hydro_dir/conf.d/hydro.fish"
-    source "$hydro_dir/functions/fish_mode_prompt.fish"
+    source "$__fish_config_dir/config.d/hydro.fish"
 
     function fish_prompt --description 'Minimal inline Hydro prompt'
         set -l last_status $status

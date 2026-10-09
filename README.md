@@ -1,72 +1,51 @@
 # Dotfiles
 
-Managed with [yadm](https://yadm.io/).
+Minimal terminal + git + AI agents setup for Linux and macOS, managed with [yadm](https://yadm.io/).
 
-## Setup on a new MacOS machine
+## 1. Install packages
 
-### 1. Install essential tools and setup fish shell
+**Linux (Arch / CachyOS)**
 
-```bash
-# Install homebrew
+```sh
+sudo pacman -S fish git yadm eza zoxide fzf neovim ghostty
+paru -S maplemono-nf
+```
+
+**macOS**
+
+```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Install common CLI tools
-brew install coreutils eza fastfetch fd fish fzf gh git jq ripgrep starship tokei uv wget xh yadm yq zoxide
-
-# Install fish and set it as a default shell
-brew install fish
-which fish | sudo tee -a /etc/shells # Feel free to `cat /etc/shells` first to check if it's already there
-chsh -s $(which fish)
-
-# Install fish plugin manager
-exec fish -l
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
-fisher install jorgebucaran/fisher
+brew install fish git yadm eza zoxide fzf neovim
+brew install --cask ghostty font-maple-mono-nf 1password betterdisplay google-chrome karabiner-elements
 ```
 
-### 2. Clone dotfiles
+## 2. Set fish as the default shell
 
-We might not have SSH access yet, so we use HTTPS for cloning.
-
-```bash
-yadm clone https://github.com/piotrek-szczygiel/dotfiles
-yadm remote set-url origin git@github.com:piotrek-szczygiel/dotfiles
+```sh
+command -v fish | sudo tee -a /etc/shells
+chsh -s "$(command -v fish)"
 ```
 
-### 3. Install non-essential tools
+## 3. SSH key and dotfiles
 
-```bash
-# DevOps stuff
-brew install awscli cosign kubectx tenv
+Every machine gets its own key; add the public key at https://github.com/settings/keys.
 
-# Python
-uv python install --default
+```sh
+ssh-keygen -t ed25519 -C "$(hostname)"
+cat ~/.ssh/id_ed25519.pub
 
-# Java
-curl -s "https://get.sdkman.io" | bash
-fisher install reitzig/sdkman-for-fish
-sdk install java 21.0.10-amzn # 25-tem
+yadm clone git@github.com:piotrek-szczygiel/dotfiles
 ```
 
-### 4. Install common applications
+## 4. AI agents
 
-- [1Password](https://1password.com/downloads)
-- [BetterDisplay](https://github.com/waydabber/BetterDisplay/releases)
-- [FlashSpace](https://github.com/wojciech-kulik/FlashSpace/releases)
-- [Ghostty](https://ghostty.org/download)
-- [Google Chrome](https://www.google.com/chrome/)
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
-- [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
-- [KeepingYouAwake](https://keepingyouawake.app/)
-- [LinearMouse](https://linearmouse.app/)
-- [OrbStack](https://orbstack.dev/download)
-- [Raycast](https://www.raycast.com/)
-- [Rectangle Pro](https://rectangleapp.com/pro)
-- [Stats](https://mac-stats.com/)
-- [Zed](https://zed.dev/download)
+```sh
+curl -fsSL https://claude.ai/install.sh | bash
+curl -fsSL https://opencode.ai/install | bash
+```
 
-### 5. Install work-related applications
+## Per-machine overrides
 
-- [Microsoft Outlook](https://apps.apple.com/app/microsoft-outlook/id985367838)
-- [Slack](https://slack.com/downloads/mac)
+- Ghostty: `~/.config/ghostty/local` (untracked), e.g. `font-size = 11` or `working-directory = /home/piotr/Developer`.

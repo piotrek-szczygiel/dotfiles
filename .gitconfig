@@ -1,6 +1,3 @@
-[gpg "ssh"]
-    allowedSignersFile = ~/.ssh/allowed_signers
-
 [user]
     email = szczygiel.p@gmail.com
     name = Piotr Szczygieł
@@ -27,9 +24,6 @@
     insteadOf = gh:
     pushInsteadOf = github:
     pushInsteadOf = git://github.com/
-
-[include]
-    path = ~/.gitconfig.os
 
 [alias]
     main = !git checkout main 2>/dev/null || git checkout master

@@ -1,9 +1,8 @@
 set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
-set -gx TENV_AUTO_INSTALL "true"
 set -g fish_greeting ""
 
-fish_add_path "$HOME/.local/bin"
+fish_add_path -g "$HOME/.local/bin" "$HOME/.opencode/bin"
 
 # Keep non-interactive shells (including Hydro's Git worker) lightweight.
 if not status is-interactive
@@ -47,7 +46,6 @@ alias glg "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias gp "git push"
 alias gs "git status"
 
-alias tf "terraform"
 alias q "exit"
 
 zoxide init fish | source
