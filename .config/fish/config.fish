@@ -48,6 +48,9 @@ alias gs "git status"
 
 alias q "exit"
 
+# Debian ships fd as fdfind.
+command -q fdfind; and alias fd fdfind
+
 zoxide init fish | source
 
 source "$__fish_config_dir/config.d/prompt.fish"
