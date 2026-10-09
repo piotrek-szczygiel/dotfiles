@@ -33,8 +33,8 @@ set -g fish_pager_color_selected_background --reverse
 # Aliases, key bindings and interactive integrations.
 alias l "eza  --git --icons --group-directories-first"
 alias ls "eza --git --icons --group-directories-first"
-alias ll "eza --git --icons --group-directories-first -lF"
-alias la "eza --git --icons --group-directories-first -laF"
+alias ll "eza -lF --git --icons --group-directories-first"
+alias la "eza -laF --git --icons --group-directories-first"
 
 alias ga "git add"
 alias gb "git switch"
