@@ -9,6 +9,11 @@ if not status is-interactive
     return
 end
 
+# T3 Code's terminal ignores fish's startup queries, causing a 10s hang.
+if set -q T3CODE_CLI_PATH; and status test-feature query-term
+    exec fish --features no-query-term
+end
+
 # Use the terminal palette for syntax highlighting and completion menus.
 set -g fish_color_normal normal
 set -g fish_color_command green
